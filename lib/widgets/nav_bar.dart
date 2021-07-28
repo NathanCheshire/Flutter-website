@@ -5,48 +5,84 @@ class NavigationBar extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
-        height: 100,
-        child: Row (
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
           children: [
-            Row(
-              children: [
-                SizedBox(width: 20),
-                CircleAvatar(
-              backgroundColor: Color.fromRGBO(45, 45, 45, 1),
-              backgroundImage: AssetImage("assets/Nathan.png"),
-              radius: 35,
-          ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              mainAxisSize: MainAxisSize.min,
+            Padding(
+              padding: EdgeInsets.only(top: 20, left: 20),
+              child: Stack(
+                alignment: Alignment.center,
                 children: [
-                  _NavBarItem("Home"),
-                  SizedBox(width: 60),
-                  _NavBarItem("Resume"),
-                  SizedBox(width: 60),
-            ],
-            )
-        ],)
-    );
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 30,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Color.fromRGBO(19, 19, 35, 1),
+                    radius: 28,
+                  ),
+                  Text(
+                    "NC",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Roboto",
+                      color: Color.fromRGBO(127, 142, 158, 1),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _NavBarItem("Home", true),
+            SizedBox(width: 40),
+            _NavBarItem("GitHub", false),
+            SizedBox(width: 40),
+            _NavBarItem("Experience", false),
+            SizedBox(width: 40),
+            _NavBarItem("Resume", false),
+            SizedBox(width: 40),
+          ],
+        )
+      ],
+    ));
   }
 }
 
+// ignore: must_be_immutable
 class _NavBarItem extends StatelessWidget {
   final String title;
-  _NavBarItem(this.title);
+  bool currentTab;
+  _NavBarItem(this.title, this.currentTab);
 
   Widget build(BuildContext context) {
-    return Text(
-      title, 
-      style: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        fontFamily: "Roboto"
+    return Container(
+      decoration: BoxDecoration(
+        border: currentTab
+            ? Border(
+                bottom: BorderSide(
+                color: Color.fromRGBO(127, 142, 158, 1),
+                width: 3.0,
+              ))
+            : null,
+      ),
+      child: Text(
+        title,
+        style: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          fontFamily: "Roboto",
+          color: Color.fromRGBO(127, 142, 158, 1),
         ),
-      );
+      ),
+    );
   }
 }
 
