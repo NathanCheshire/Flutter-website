@@ -16,7 +16,7 @@ class BottomSep extends StatelessWidget {
         padding: EdgeInsets.all(10),
         child: Container(
           child: Text(
-            "Friends",
+            "Links",
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
