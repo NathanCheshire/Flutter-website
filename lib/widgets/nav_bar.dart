@@ -5,13 +5,14 @@ class NavigationBar extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
+      color: Color.fromRGBO(37,44,72, 1),
         child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 20, left: 20),
+              padding: EdgeInsets.only(top: 20, left: 20, bottom: 10),
               child: Stack(
                 alignment: Alignment.center,
                 children: [
@@ -20,7 +21,7 @@ class NavigationBar extends StatelessWidget {
                     radius: 30,
                   ),
                   CircleAvatar(
-                    backgroundColor: Color.fromRGBO(19, 19, 35, 1),
+                    backgroundColor: Color.fromRGBO(37,44,72, 1),
                     radius: 28,
                   ),
                   Text(

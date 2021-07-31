@@ -5,8 +5,8 @@ import 'bottom_box_art.dart';
 import 'bottom_separator.dart';
 
 // ignore: camel_case_types
-class bottom_widget extends StatelessWidget {
-  const bottom_widget({
+class BottomWidget extends StatelessWidget {
+  const BottomWidget({
     Key? key,
   }) : super(key: key);
 

@@ -19,7 +19,7 @@ class BottomBoxArt extends StatelessWidget {
           Container(
             height: 98,
             width: 98,
-            color: Color.fromRGBO(19, 19, 35, 1),
+            color: Color.fromRGBO(29, 34, 55, 1),
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Stack(
@@ -33,7 +33,7 @@ class BottomBoxArt extends StatelessWidget {
                     Container(
                       width: 66,
                       height: 66,
-                      color: Color.fromRGBO(19, 19, 35, 1),
+                      color: Color.fromRGBO(29, 34, 55, 1),
                       child: Stack(
                         alignment: Alignment.centerRight,
                         children: [
@@ -50,7 +50,7 @@ class BottomBoxArt extends StatelessWidget {
                                 Container(
                                   width: 46,
                                   height: 46,
-                                  color: Color.fromRGBO(19, 19, 35, 1),
+                                  color: Color.fromRGBO(29, 34, 55, 1),
                                   child: Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Stack(
@@ -62,20 +62,22 @@ class BottomBoxArt extends StatelessWidget {
                                               Container(
                                                 width: 26,
                                                 height: 26,
-                                                color: Color.fromRGBO(127, 142, 158, 1),
+                                                color: Color.fromRGBO(
+                                                    127, 142, 158, 1),
                                               ),
                                               Container(
                                                 width: 24,
                                                 height: 24,
                                                 color: Color.fromRGBO(
-                                                    19, 19, 35, 1),
+                                                    29, 34, 55, 1),
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Container(
                                                     width: 14,
                                                     height: 14,
-                                                    color: Color.fromRGBO(127, 142, 158, 1),
+                                                    color: Color.fromRGBO(
+                                                        127, 142, 158, 1),
                                                   ),
                                                 ),
                                               ),
