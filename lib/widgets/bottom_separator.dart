@@ -3,34 +3,16 @@ import 'package:flutter/material.dart';
 
 class BottomSep extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center, 
+      children: [
       Padding(
         padding: EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
         child: Container(
-          width: MediaQuery.of(context).size.width / 2 - 125,
-          height: 5,
-          color: Color.fromRGBO(127, 142, 158, 1),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10),
-        child: Container(
-          child: Text(
-            "Links",
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Roboto",
-              color: Color.fromRGBO(127, 142, 158, 1),
-            ),
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
-        child: Container(
-          width: MediaQuery.of(context).size.width / 2 - 125,
-          height: 5,
+          alignment: Alignment.center,
+          width: MediaQuery.of(context).size.width - 100,
+          height: 3,
           color: Color.fromRGBO(127, 142, 158, 1),
         ),
       ),

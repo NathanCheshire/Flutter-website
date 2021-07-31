@@ -14,7 +14,7 @@ class BottomBoxArt extends StatelessWidget {
           Container(
             height: 100,
             width: 100,
-            color: Colors.white,
+            color: Color.fromRGBO(127, 142, 158, 1),
           ),
           Container(
             height: 98,
@@ -29,7 +29,7 @@ class BottomBoxArt extends StatelessWidget {
                     Container(
                         width: 68,
                         height: 68,
-                        color: Colors.white),
+                        color: Color.fromRGBO(127, 142, 158, 1)),
                     Container(
                       width: 66,
                       height: 66,
@@ -45,51 +45,37 @@ class BottomBoxArt extends StatelessWidget {
                                 Container(
                                   width: 48,
                                   height: 48,
-                                  color: Colors.white,
+                                  color: Color.fromRGBO(127, 142, 158, 1),
                                 ),
                                 Container(
                                   width: 46,
                                   height: 46,
-                                  color: Color.fromRGBO(
-                                      19, 19, 35, 1),
+                                  color: Color.fromRGBO(19, 19, 35, 1),
                                   child: Padding(
-                                      padding:
-                                          const EdgeInsets.all(
-                                              4.0),
+                                      padding: const EdgeInsets.all(4.0),
                                       child: Stack(
-                                        alignment: Alignment
-                                            .bottomLeft,
+                                        alignment: Alignment.bottomLeft,
                                         children: [
                                           Stack(
-                                            alignment: Alignment
-                                                .center,
+                                            alignment: Alignment.center,
                                             children: [
                                               Container(
                                                 width: 26,
                                                 height: 26,
-                                                color: Colors
-                                                    .white,
+                                                color: Color.fromRGBO(127, 142, 158, 1),
                                               ),
                                               Container(
                                                 width: 24,
                                                 height: 24,
-                                                color: Color
-                                                    .fromRGBO(
-                                                        19,
-                                                        19,
-                                                        35,
-                                                        1),
+                                                color: Color.fromRGBO(
+                                                    19, 19, 35, 1),
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets
-                                                              .all(
-                                                          5.0),
-                                                  child:
-                                                      Container(
+                                                      const EdgeInsets.all(5.0),
+                                                  child: Container(
                                                     width: 14,
                                                     height: 14,
-                                                    color: Colors
-                                                        .white,
+                                                    color: Color.fromRGBO(127, 142, 158, 1),
                                                   ),
                                                 ),
                                               ),

@@ -16,7 +16,7 @@ class NavigationBar extends StatelessWidget {
                 alignment: Alignment.center,
                 children: [
                   CircleAvatar(
-                    backgroundColor: Colors.white,
+                    backgroundColor: Color.fromRGBO(127, 142, 158, 1),
                     radius: 30,
                   ),
                   CircleAvatar(
@@ -48,6 +48,8 @@ class NavigationBar extends StatelessWidget {
             _NavBarItem("Experience", false),
             SizedBox(width: 40),
             _NavBarItem("Resume", false),
+            SizedBox(width: 40),
+            _NavBarItem("Contact", false),
             SizedBox(width: 40),
           ],
         )
