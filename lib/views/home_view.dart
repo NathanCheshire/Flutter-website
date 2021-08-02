@@ -23,15 +23,37 @@ class HomeView extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   children: [
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Place Holder Text",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Roboto",
-                            color: Color.fromRGBO(127, 142, 158, 1),
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SvgPicture.asset(
+                              "assets/MSU.svg",
+                              width: 150,
+                              height: 150,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.75,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 30),
+                                child: Text(
+                                  "Hello, my name's Nathan Cheshire, " +
+                                      "you can call me Nate if you like, and I " +
+                                      "attend Mississippi State University (Baseball National " +
+                                      "Champions for the NCAA 2021 season might I add). I chose " +
+                                      "MSU because of the excellent engineering programs and " +
+                                      "have chosen to major in Software Engineering and Mathematics.",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Colors.white60,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -42,36 +64,44 @@ class HomeView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 1,
+                          width: 0,
                         ),
-                        Text(
-                          "Place Holder Text",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Roboto",
-                            color: Color.fromRGBO(127, 142, 158, 1),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    Row(
-                      children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            SvgPicture.asset("assets/MSU.svg"),
+                            Row(
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Flutter.svg",
+                                  width: 150,
+                                  height: 150,
+                                ),
+                                SizedBox(width: 80,),
+                                SvgPicture.asset(
+                                  "assets/Dart.svg",
+                                  width: 150,
+                                  height: 150,
+                                ),
+                              ],
+                            ),
                             Container(
-                              width: 400,
-                              child: Text(
-                                "Hello, my name is Nathan Cheshire and I attend Mississippi State University (National Champions might I add)",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "Roboto",
-                                  color: Color.fromRGBO(127, 142, 158, 1),
+                              width: MediaQuery.of(context).size.width * 0.75,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 30),
+                                child: Text(
+                                  "I chose to write this website using flutter for a few reasons." +
+                                      " The first being the power of flutter. Not only is it a UI framework" +
+                                      " for the web, iOS, Android, and desktop, but it is also a combination" +
+                                      " of an extremely high performance graphics engine and the language dart" +
+                                      " which compiles to native machine ARM64 or x86/64 code meaning faster and" +
+                                      " still beautiful graphics",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Colors.white60,
+                                  ),
                                 ),
                               ),
                             )

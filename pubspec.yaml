@@ -23,5 +23,7 @@ flutter:
   uses-material-design: true
 
   assets: 
-    - assets/nathan.png
     - assets/MSU.svg
+    - assets/Flutter.svg
+    - assets/Dart.svg
+    
