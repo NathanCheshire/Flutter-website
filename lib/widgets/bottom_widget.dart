@@ -16,7 +16,7 @@ class BottomWidget extends StatelessWidget {
       color: Color.fromRGBO(37,44,72, 1),
       child: Column(
         children: [
-          FullWidthSep(),
+          FullWidthSep("",0),
           Padding (
             padding: const EdgeInsets.only(left: 50.0, right: 50.0),
             child: Row(

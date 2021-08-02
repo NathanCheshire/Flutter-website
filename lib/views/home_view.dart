@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_website/widgets/bottom_separator.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
 import 'package:flutter_website/widgets/nav_bar.dart';
 
@@ -22,6 +23,7 @@ class HomeView extends StatelessWidget {
                 child: ListView(
                   physics: BouncingScrollPhysics(),
                   children: [
+                    FullWidthSep("Home",MediaQuery.of(context).size.width - 40),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -38,12 +40,13 @@ class HomeView extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 30),
                                 child: Text(
-                                  "Hello, my name's Nathan Cheshire, " +
-                                      "you can call me Nate if you like, and I " +
-                                      "attend Mississippi State University (Baseball National " +
-                                      "Champions for the NCAA 2021 season might I add). I chose " +
-                                      "MSU because of the excellent engineering programs and " +
-                                      "have chosen to major in Software Engineering and Mathematics.",
+                                  "Greetings and welcome to my personal webapp portfolio! " +
+                                      "I attend Mississippi State University (Baseball National " +
+                                      "Champions for the NCAA 2021 season might I add) for software " + 
+                                      "engineering and mathematics. I chose " +
+                                      "MSU because of the excellent engineering programs, great community," + 
+                                      " and the scholarships I received, among of which was a scholarhsip for " + 
+                                      "being an Eagle Scout which I was very happy to learn about.",
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -89,12 +92,11 @@ class HomeView extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 30),
                                 child: Text(
-                                  "I chose to write this website using flutter for a few reasons." +
-                                      " The first being the power of flutter. Not only is it a UI framework" +
+                                  "I chose to write this website using Flutter/Firebase for a few reasons." +
+                                      " The first being the power of Flutter. Not only is it a UI framework" +
                                       " for the web, iOS, Android, and desktop, but it is also a combination" +
-                                      " of an extremely high performance graphics engine and the language dart" +
-                                      " which compiles to native machine ARM64 or x86/64 code meaning faster and" +
-                                      " still beautiful graphics",
+                                      " of an extremely high performance graphics engine and the language Dart" +
+                                      " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
                                   textAlign: TextAlign.right,
                                   style: TextStyle(
                                     fontSize: 18,
