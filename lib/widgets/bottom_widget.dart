@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'bottom_box_art.dart';
+import 'bottom_decorator.dart';
 import 'bottom_separator.dart';
 
 // ignore: camel_case_types
@@ -22,7 +22,7 @@ class BottomWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                BottomBoxArt(),
+                BottomDecorator(),
                 SizedBox(
                   width: 40,
                 ),
@@ -72,7 +72,7 @@ class BottomWidget extends StatelessWidget {
                 SizedBox(
                   width: 40,
                 ),
-                BottomBoxArt(),
+                BottomDecorator(),
               ],
             ),
           )
