@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'bottom_separator.dart';
-
 // ignore: camel_case_types
 class BottomWidget extends StatelessWidget {
   const BottomWidget({
@@ -12,10 +10,10 @@ class BottomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
       color: Color.fromRGBO(37, 44, 72, 1),
       child: Column(
         children: [
-          FullWidthSep("", 0),
           Padding(
             padding: const EdgeInsets.only(left: 50.0, right: 50.0),
             child: Wrap(
@@ -31,9 +29,9 @@ class BottomWidget extends StatelessWidget {
                         "Webapp GitHub Source: https://github.com/NathanCheshire/Flutter-website",
                         style: TextStyle(
                           fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w400,
                           fontFamily: "Roboto",
-                          color: Color.fromRGBO(127, 142, 158, 1),
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -43,7 +41,7 @@ class BottomWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30, right: 15),
                   child: Icon(
                     Icons.speaker_notes,
-                    color: Color.fromRGBO(127, 142, 158, 1),
+                    color: Colors.white,
                     size: 40,
                   ),
                 ),
@@ -58,9 +56,9 @@ class BottomWidget extends StatelessWidget {
                         "Questions, comments, concerns? DM me through the website using your account (go ahead and create one if you haven't yet)",
                         style: TextStyle(
                           fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w400,
                           fontFamily: "Roboto",
-                          color: Color.fromRGBO(127, 142, 158, 1),
+                          color: Colors.white,
                         ),
                       ),
                     ),

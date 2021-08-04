@@ -1,13 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_website/widgets/bottom_separator.dart';
+import 'package:flutter_website/widgets/full_width_separator.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
 import 'package:flutter_website/widgets/github_card.dart';
 import 'package:flutter_website/widgets/nav_bar.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
+
+  final controller = ScrollController();
+
+  getController() {
+    return this.controller;
+  }
 
   Widget build(BuildContext context) {
     return Container(
@@ -16,12 +22,13 @@ class HomeView extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            NavigationBar(),
+            NavigationBar(controller: controller),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(
                     top: 50, bottom: 50, left: 20, right: 20),
                 child: ListView(
+                  controller: controller,
                   physics: BouncingScrollPhysics(),
                   children: [
                     FullWidthSep("Home",MediaQuery.of(context).size.width - 40),
@@ -49,10 +56,10 @@ class HomeView extends StatelessWidget {
                                       " and the scholarships I received, among of which was a scholarhsip for " + 
                                       "being an Eagle Scout which I was very happy to learn about.",
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 26,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "Roboto",
-                                    color: Colors.white60,
+                                    color: Colors.white,
                                   ),
                                 ),
                               ),
@@ -100,10 +107,10 @@ class HomeView extends StatelessWidget {
                                       " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
                                   textAlign: TextAlign.right,
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 26,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "Roboto",
-                                    color: Colors.white60,
+                                    color: Colors.white,
                                   ),
                                 ),
                               ),
@@ -112,7 +119,7 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
-                    FullWidthSep("GitHub",MediaQuery.of(context).size.width - 40),
+                    FullWidthSep("GitHub", MediaQuery.of(context).size.width - 40),
                     Container(
                       child: Wrap (
                         alignment: WrapAlignment.center,

@@ -26,8 +26,9 @@ class GitHubCard extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromRGBO(40, 47, 67, 1),
-                Color.fromRGBO(40, 47, 67, 1)
+                 Color(0xFF3a1c71),
+                 Color(0xFFd76d77),
+                 Color(0xFFffaf7b)
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -44,14 +45,14 @@ class GitHubCard extends StatelessWidget {
                     this.title,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                     overflow: TextOverflow.fade,
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ), //spac
                 Container(
                   width: cardWidth,
@@ -66,7 +67,7 @@ class GitHubCard extends StatelessWidget {
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Roboto",
-                            color: Colors.white60,
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -74,7 +75,7 @@ class GitHubCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -83,8 +84,8 @@ class GitHubCard extends StatelessWidget {
                     Text(
                       this.commits,
                       style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
+                        color: Colors.white,
+                        fontSize: 16,
                         fontWeight: FontWeight.w800,
                       ),
                       overflow: TextOverflow.fade,

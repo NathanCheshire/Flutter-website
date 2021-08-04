@@ -1,13 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class NavigationBar extends StatefulWidget {
+  ScrollController controller;
+
+  NavigationBar({
+    required this.controller,
+  });
+
   @override
-  NavigationBarState createState() => NavigationBarState();
+  NavigationBarState createState() =>
+      NavigationBarState(controller: controller);
 }
 
 class NavigationBarState extends State<NavigationBar> {
   int currentIndex = 0;
+  ScrollController controller;
+
+  NavigationBarState({
+    required this.controller,
+  });
 
   setCurrentIndex(int index) {
     setState(() {
@@ -326,7 +339,7 @@ class NavigationBarState extends State<NavigationBar> {
                       alignment: Alignment.center,
                       children: [
                         CircleAvatar(
-                          backgroundColor: Color.fromRGBO(127, 142, 158, 1),
+                          backgroundColor: Colors.white,
                           radius: 30,
                         ),
                         CircleAvatar(
@@ -339,7 +352,7 @@ class NavigationBarState extends State<NavigationBar> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Roboto",
-                            color: Color.fromRGBO(127, 142, 158, 1),
+                            color: Colors.white,
                           ),
                         )
                       ],
@@ -372,7 +385,7 @@ class NavigationBarState extends State<NavigationBar> {
           border: index == currentIndex
               ? Border(
                   bottom: BorderSide(
-                  color: Color.fromRGBO(127, 142, 158, 1),
+                  color: Colors.white,
                   width: 3.0,
                 ))
               : null,
@@ -380,14 +393,19 @@ class NavigationBarState extends State<NavigationBar> {
         child: new GestureDetector(
           onTap: () {
             setCurrentIndex(index);
+            controller.animateTo(
+              200,
+              duration: Duration(seconds: 1),
+              curve: Curves.fastOutSlowIn,
+            );
           },
           child: Text(
             title,
             style: TextStyle(
               fontSize: 14,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w400,
               fontFamily: "Roboto",
-              color: Color.fromRGBO(127, 142, 158, 1),
+              color: Colors.white,
             ),
           ),
         ));
