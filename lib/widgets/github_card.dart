@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +14,8 @@ class GitHubCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int zeroOrOne = new Random().nextInt(2);
-    double cardWidth = MediaQuery.of(context).size.width / (zeroOrOne == 0 ? 4 : 5);
-    double cardHeight = MediaQuery.of(context).size.width / (zeroOrOne == 1 ? 4 : 5);
+    double cardWidth = MediaQuery.of(context).size.width / 5;
+    double cardHeight = MediaQuery.of(context).size.width / 4;
 
     return Container(
       padding: const EdgeInsets.all(10),
@@ -37,13 +34,12 @@ class GitHubCard extends StatelessWidget {
             ),
             borderRadius: BorderRadius.all(Radius.circular(14)),
           ),
-          child: Column(
-            //column holds all text on container
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Container(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
                   child: Text(
                     this.title,
                     style: TextStyle(
@@ -54,34 +50,33 @@ class GitHubCard extends StatelessWidget {
                     overflow: TextOverflow.fade,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 2,
-              ), //spacer
-              Container(
-                width: cardWidth,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
-                  child: Text(
-                    "Multipurpose tool written entirely in Java without FXML or other modern GUI dependencies (custom UI library built over Swing/AWT).",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Roboto",
-                      color: Colors.white60,
+                SizedBox(
+                  height: 10,
+                ), //spac
+                Container(
+                  width: cardWidth,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
+                    child: Column(
+                      children: [
+                        Text(
+                          this.description,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Roboto",
+                            color: Colors.white60,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ),
-
-              SizedBox(
-                height: 2,
-              ),
-
-              Expanded(
-                child: Container(
-                    child: Row(
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -95,9 +90,9 @@ class GitHubCard extends StatelessWidget {
                       overflow: TextOverflow.fade,
                     ),
                   ],
-                )),
-              ),
-            ],
+                ),
+              ],
+            ),
           )),
     );
   }
