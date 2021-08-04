@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_website/widgets/bottom_separator.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
+import 'package:flutter_website/widgets/github_card.dart';
 import 'package:flutter_website/widgets/nav_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -111,6 +112,27 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
+                    FullWidthSep("GitHub",MediaQuery.of(context).size.width - 40),
+                    Container(
+                      child: Wrap (
+                        alignment: WrapAlignment.center,
+                        direction: Axis.horizontal,
+                        children: [
+                          GitHubCard(title: "Cyder", 
+                          description: "Multipurpose tool...",
+                           commits: " 779 commits"),
+                            GitHubCard(title: "Cyder", 
+                          description: "Multipurpose tool...",
+                           commits: " 779 commits"),
+                            GitHubCard(title: "Cyder", 
+                          description: "Multipurpose tool...",
+                           commits: " 779 commits"),
+                            GitHubCard(title: "Cyder", 
+                          description: "Multipurpose tool...",
+                           commits: " 779 commits"),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

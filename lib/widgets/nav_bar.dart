@@ -20,8 +20,6 @@ class NavigationBarState extends State<NavigationBar> {
     final String defaultInitials = "UU";
 
     Future _createUserPopup(BuildContext context) async {
-
-
       return showDialog(
           context: context,
           builder: (context) {
@@ -254,7 +252,9 @@ class NavigationBarState extends State<NavigationBar> {
                                           },
                                         ),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.of(context).pop([null]);
+                                      },
                                     ),
                                     SizedBox(
                                       width: 20,
@@ -292,7 +292,10 @@ class NavigationBarState extends State<NavigationBar> {
                                           },
                                         ),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        //todo validate data and if valid, email user
+                                        Navigator.of(context).pop([null]);
+                                      },
                                     ),
                                   ],
                                 )
