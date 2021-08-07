@@ -26,9 +26,9 @@ class GitHubCard extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                 Color(0xFF3a1c71),
-                 Color(0xFFd76d77),
-                 Color(0xFFffaf7b)
+                Color(0xFF2A5470 ),
+                Color(0xFF4C4177),
+                //Color(0xFFffaf7b)
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -65,9 +65,9 @@ class GitHubCard extends StatelessWidget {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w300,
                             fontFamily: "Roboto",
-                            color: Colors.white,
+                            color: Colors.white70,
                           ),
                         ),
                       ],
@@ -86,7 +86,7 @@ class GitHubCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w600,
                       ),
                       overflow: TextOverflow.fade,
                     ),
