@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_website/views/home_view.dart';
 
 // ignore: must_be_immutable
 class NavigationBar extends StatefulWidget {
@@ -119,7 +120,7 @@ class NavigationBarState extends State<NavigationBar> {
           onTap: () {
             setCurrentIndex(index);
             controller.animateTo(
-              200,
+              200, //fix this
               duration: Duration(seconds: 1),
               curve: Curves.fastOutSlowIn,
             );

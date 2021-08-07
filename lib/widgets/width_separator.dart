@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FullWidthSep extends StatelessWidget {
+class WidthSep extends StatelessWidget {
   final String descriptor;
   final double width;
-  FullWidthSep(this.descriptor, this.width);
+  WidthSep(this.descriptor, this.width);
   Widget build(BuildContext context) {
     return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 10, bottom: 10, left: 0, right: 0),
+            padding: EdgeInsets.only(top: 10, bottom: 30, left: 0, right: 0),
             child: Column(
               children: [
                 if (descriptor.length != 0)

@@ -4,20 +4,18 @@ import 'package:flutter/material.dart';
 class GitHubCard extends StatelessWidget {
   final String title;
   final String description;
-  final String commits;
   final String language;
 
   const GitHubCard({
     required this.title,
     required this.description,
-    required this.commits,
     required this.language,
   });
 
   @override
   Widget build(BuildContext context) {
-    double cardWidth = MediaQuery.of(context).size.width / 5;
-    double cardHeight = MediaQuery.of(context).size.width / 4;
+    double cardWidth = 256;
+    double cardHeight = 320;
 
     return Container(
       padding: const EdgeInsets.all(10),
@@ -38,6 +36,7 @@ class GitHubCard extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(14)),
           ),
           child: SingleChildScrollView(
+            
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +53,7 @@ class GitHubCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 10,
                 ), //spac
                 Container(
                   width: cardWidth,
@@ -77,23 +76,14 @@ class GitHubCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
                       this.language,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      overflow: TextOverflow.fade,
-                    ),
-                    Text(
-                      this.commits,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

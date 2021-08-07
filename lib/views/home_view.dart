@@ -1,15 +1,37 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_website/widgets/full_width_separator.dart';
+import 'package:flutter_website/entities/repo.dart';
+import 'package:flutter_website/widgets/width_separator.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
 import 'package:flutter_website/widgets/github_card.dart';
 import 'package:flutter_website/widgets/nav_bar.dart';
+import 'package:http/http.dart' as http;
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
 
   final controller = ScrollController();
+
+  static final String reposString =
+      'https://api.github.com/users/nathancheshire/repos';
+
+  static Future<List<Repo>> getRepos() async {
+    http.Response response = await http.get(Uri.parse(reposString));
+
+    if (response.statusCode == 200) {
+      List<Repo> repoList;
+      repoList = (json.decode(response.body) as List)
+          .map((i) => Repo.fromJson(i))
+          .toList();
+
+      return repoList;
+    } else {
+      throw Exception('Failed to load repos');
+    }
+  }
 
   getController() {
     return this.controller;
@@ -31,7 +53,7 @@ class HomeView extends StatelessWidget {
                   controller: controller,
                   physics: BouncingScrollPhysics(),
                   children: [
-                    FullWidthSep("Home",MediaQuery.of(context).size.width - 40),
+                    WidthSep("Home", MediaQuery.of(context).size.width - 40),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -50,13 +72,13 @@ class HomeView extends StatelessWidget {
                                 child: Text(
                                   "Greetings and welcome to my personal webapp portfolio! " +
                                       "I attend Mississippi State University (Baseball National " +
-                                      "Champions for the NCAA 2021 season might I add) for software " + 
+                                      "Champions for the NCAA 2021 season might I add) for software " +
                                       "engineering and mathematics. I chose " +
-                                      "MSU because of the excellent engineering programs, great community," + 
-                                      " and the scholarships I received, among of which was a scholarhsip for " + 
+                                      "MSU because of the excellent engineering programs, great community," +
+                                      " and the scholarships I received, among of which was a scholarhsip for " +
                                       "being an Eagle Scout which I was very happy to learn about.",
                                   style: TextStyle(
-                                    fontSize: 26,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "Roboto",
                                     color: Colors.white,
@@ -87,7 +109,9 @@ class HomeView extends StatelessWidget {
                                   width: 150,
                                   height: 150,
                                 ),
-                                SizedBox(width: 80,),
+                                SizedBox(
+                                  width: 80,
+                                ),
                                 SvgPicture.asset(
                                   "assets/Dart.svg",
                                   width: 150,
@@ -107,7 +131,7 @@ class HomeView extends StatelessWidget {
                                       " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
                                   textAlign: TextAlign.right,
                                   style: TextStyle(
-                                    fontSize: 26,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "Roboto",
                                     color: Colors.white,
@@ -119,33 +143,31 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
-                    FullWidthSep("GitHub", MediaQuery.of(context).size.width - 40),
-                    Container(
-                      child: Wrap (
-                        alignment: WrapAlignment.center,
-                        direction: Axis.horizontal,
-                        children: [
-                          Padding (
-                            padding: const EdgeInsets.all(10.0),
-                            child: GitHubCard(title: "Cyder", 
-                            description: "Multipurpose tool written entirely in Java without FXML or other modern GUI dependencies (custom UI library built over Swing/AWT).",
-                             commits: " 779 commits", language: "Java"),
-                          ),
-                           Padding (
-                            padding: const EdgeInsets.all(10.0),
-                            child: GitHubCard(title: "Cyder", 
-                            description: "Multipurpose tool written entirely in Java without FXML or other modern GUI dependencies (custom UI library built over Swing/AWT).",
-                             commits: " 779 commits", language: "Java"),
-                          ),
-                           Padding (
-                            padding: const EdgeInsets.all(10.0),
-                            child: GitHubCard(title: "Cyder", 
-                            description: "Multipurpose tool written entirely in Java without FXML or other modern GUI dependencies (custom UI library built over Swing/AWT).",
-                             commits: " 779 commits", language: "Java"),
-                          ),
-                        ],
-                      ),
-                    )
+                    WidthSep("GitHub", MediaQuery.of(context).size.width - 40),
+                    FutureBuilder(
+                        future: getRepos(),
+                        builder: (context, AsyncSnapshot snap) {
+                          if (!snap.hasData) {
+                            return Center(child: CircularProgressIndicator());
+                          } else {
+                            return ListView.builder(
+                                
+                                itemCount: snap.data.length,
+                                physics: BouncingScrollPhysics(),
+                                shrinkWrap: true,
+                                itemBuilder: (BuildContext context, int index) {
+                                  if (snap.data[index].name == null ||
+                                      snap.data[index].description == null ||
+                                      snap.data[index].language == null) 
+                                    return Container();
+                                  else
+                                    return GitHubCard(
+                                        title: snap.data[index].name,
+                                        description: snap.data[index].description,
+                                        language: "Language: " + snap.data[index].language);
+                                });
+                          }
+                        }),
                   ],
                 ),
               ),

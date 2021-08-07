@@ -2,13 +2,13 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'License.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(nullable: true)
 class License {
-    final String key;
-    final String name;
-    final String spdx_id;
-    final String url;
-    final String node_id;
+    final String? key;
+    final String? name;
+    final String? spdx_id;
+    final String? url;
+    final String? node_id;
 
   const License({
     required this.key,

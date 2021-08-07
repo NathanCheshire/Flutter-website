@@ -8,11 +8,11 @@ part of 'License.dart';
 
 License _$LicenseFromJson(Map<String, dynamic> json) {
   return License(
-    key: json['key'] as String,
-    name: json['name'] as String,
-    spdx_id: json['spdx_id'] as String,
-    url: json['url'] as String,
-    node_id: json['node_id'] as String,
+    key: json['key'] as String?,
+    name: json['name'] as String?,
+    spdx_id: json['spdx_id'] as String?,
+    url: json['url'] as String?,
+    node_id: json['node_id'] as String?,
   );
 }
 
