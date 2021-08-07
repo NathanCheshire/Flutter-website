@@ -150,22 +150,25 @@ class HomeView extends StatelessWidget {
                           if (!snap.hasData) {
                             return Center(child: CircularProgressIndicator());
                           } else {
-                            return ListView.builder(
-                                
-                                itemCount: snap.data.length,
-                                physics: BouncingScrollPhysics(),
-                                shrinkWrap: true,
-                                itemBuilder: (BuildContext context, int index) {
-                                  if (snap.data[index].name == null ||
-                                      snap.data[index].description == null ||
-                                      snap.data[index].language == null) 
-                                    return Container();
-                                  else
-                                    return GitHubCard(
-                                        title: snap.data[index].name,
-                                        description: snap.data[index].description,
-                                        language: "Language: " + snap.data[index].language);
-                                });
+                            List<GitHubCard> cards = [];
+
+                            for (var i = 0; i < snap.data.length; i++) {
+                              if (snap.data[i].name != null &&
+                                  snap.data[i].description != null &&
+                                  snap.data[i].language != null) {
+                                cards.add(new GitHubCard(
+                                    title: snap.data[i].name,
+                                    description: snap.data[i].description,
+                                    language:
+                                        "Language: " + snap.data[i].language));
+                              }
+                            }
+                            return Wrap(
+                                alignment: WrapAlignment.center,
+                                spacing: 50,
+                                runSpacing: 50.0,
+                                direction: Axis.horizontal,
+                                children: cards);
                           }
                         }),
                   ],

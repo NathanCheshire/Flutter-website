@@ -18,44 +18,44 @@ class GitHubCard extends StatelessWidget {
     double cardHeight = 320;
 
     return Container(
-      padding: const EdgeInsets.all(10),
       child: Container(
-          height: cardWidth,
-          width: cardHeight,
-          padding: const EdgeInsets.all(15),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFF2A5470 ),
-                Color(0xFF4C4177),
-                //Color(0xFFffaf7b)
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.all(Radius.circular(14)),
+        height: cardWidth,
+        width: cardHeight,
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFF2A5470),
+              Color(0xFF4C4177),
+              //Color(0xFFffaf7b)
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          child: SingleChildScrollView(
-            
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                  child: Text(
-                    this.title,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    overflow: TextOverflow.fade,
-                  ),
+          borderRadius: BorderRadius.all(Radius.circular(14)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              child: Text(
+                this.title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
                 ),
-                SizedBox(
-                  height: 10,
-                ), //spac
-                Container(
+                overflow: TextOverflow.fade,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ), //spac
+            Flexible(
+
+              child: SingleChildScrollView(
+                child: Container(
                   width: cardWidth,
                   child: Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -75,27 +75,29 @@ class GitHubCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      this.language,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      overflow: TextOverflow.fade,
-                    ),
-                  ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  this.language,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  overflow: TextOverflow.fade,
                 ),
               ],
             ),
-          )),
+          ],
+        ),
+      ),
     );
   }
 }
