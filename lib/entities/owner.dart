@@ -1,7 +1,3 @@
-// Copyright (c) 2017, the Dart project authors. Please see the AUTHORS file
-// for details. All rights reserved. Use of this source code is governed by a
-// BSD-style license that can be found in the LICENSE file.
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'owner.g.dart';
@@ -36,7 +32,7 @@ class Owner {
     required this.html_url,
     required this.followers_url,
     required this.following_url,
-    required this.gists_url,
+    required this.gists_url ,
     required this.starred_url,
     required this.subscriptions_url,
     required this.organizations_url,
@@ -46,7 +42,7 @@ class Owner {
     required this.site_admin
   });
 
-  factory Owner.fromJson(Map<String, dynamic> json) => _$OwnerFromJSON(json);
+  factory Owner.fromJson(Map<String, dynamic> json) => _$OwnerFromJson(json);
   
   Map<String, dynamic> toJson() => _$OwnerToJson(this);
 }

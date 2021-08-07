@@ -5,11 +5,13 @@ class GitHubCard extends StatelessWidget {
   final String title;
   final String description;
   final String commits;
+  final String language;
 
   const GitHubCard({
     required this.title,
     required this.description,
     required this.commits,
+    required this.language,
   });
 
   @override
@@ -78,9 +80,18 @@ class GitHubCard extends StatelessWidget {
                   height: 30,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
+                    Text(
+                      this.language,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      overflow: TextOverflow.fade,
+                    ),
                     Text(
                       this.commits,
                       style: TextStyle(
