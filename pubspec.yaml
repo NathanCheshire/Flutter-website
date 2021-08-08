@@ -37,4 +37,6 @@ flutter:
     - assets/Postgres.svg
     - assets/Python.svg
     - assets/Matlab.png
+    - assets/Mathematica.svg
+    - assets/Office.svg
     

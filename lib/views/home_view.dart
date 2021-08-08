@@ -49,7 +49,7 @@ class HomeView extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(
-                    top: 50, bottom: 50, left: 20, right: 20),
+                    top: 0, bottom: 0, left: 20, right: 20),
                 child: ListView(
                   controller: controller,
                   physics: BouncingScrollPhysics(),
@@ -398,7 +398,7 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
-                     SizedBox(
+                    SizedBox(
                       height: 80,
                     ),
                     Row(
@@ -420,10 +420,12 @@ class HomeView extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.75,
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
-                            child: Text("Experience using Python to complete general side projects." + 
-                            " I use this language if I need to script up a simple tool quickly. " + 
-                            "Experience using Tensorflow/keras and other libraries to complete a facial" + 
-                            " recognition project. " + "I am extemely comforable using Python to complete any project.",
+                            child: Text(
+                                "Experience using Python to complete general side projects." +
+                                    " I use this language if I need to script up a simple tool quickly. " +
+                                    "Experience using Tensorflow/keras and other libraries to complete a facial" +
+                                    " recognition project. " +
+                                    "I am extemely comforable using Python to complete any project.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
@@ -463,10 +465,132 @@ class HomeView extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.75,
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
-                            child: Text("Experience using Matlab to maniuplate data" + 
-                            " stored in netCDF format. Experience producing contour plots" + 
-                            " using Matlab. Experience scripting in Matlab to correct data," + 
-                            " track currents, and deal with layers.",
+                            child: Text(
+                                "Experience using Matlab to maniuplate data" +
+                                    " stored in netCDF format. Experience producing contour plots" +
+                                    " using Matlab. Experience scripting in Matlab to correct data," +
+                                    " track currents, and deal with layers.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Mathematica.svg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                                "Experience using Wolfram's Mathematica to complete various" +
+                                    " calculus and differential equation problems such as plotting slope fields," +
+                                    " solving differential equations by method such as undetermined coefficients," +
+                                    " variation of parameters, and laplace transforms, and modeling flow rates" +
+                                    " regarding solution concentration.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Office.svg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                                "Experience using Microsoft Office products such as " +
+                                    "Word, Excel, Power Point, and Project. Word skill level 9/10," +
+                                    " Excel skill level 7/10, Power point skill level 10/10.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                            width: 300,
+                            height: 100,
+                            child: Text("x86_64 and PIC24",
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 85,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                )))
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text("Experience writing in pure x86_64 and PIC24 (microcontroller) assembly. Knowledge of" + 
+                            " the instructions sets. Knowledge on how to read assembly instruciton sets and properly write" + 
+                            " in assembly.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
