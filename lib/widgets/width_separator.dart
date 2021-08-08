@@ -11,7 +11,7 @@ class WidthSep extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 10, bottom: 30, left: 0, right: 0),
+            padding: EdgeInsets.only(top: 0, bottom: 30, left: 0, right: 0),
             child: Column(
               children: [
                 if (descriptor.length != 0)

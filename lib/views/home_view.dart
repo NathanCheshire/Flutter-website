@@ -94,23 +94,22 @@ class HomeView extends StatelessWidget {
                       height: 100,
                     ),
                     Wrap(
-                              direction: Axis.horizontal,
-                              alignment: WrapAlignment.end,
-                              crossAxisAlignment: WrapCrossAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/Flutter.svg",
-                                  width: 150,
-                                  height: 150,
-                                ),
-                               
-                                SvgPicture.asset(
-                                  "assets/Dart.svg",
-                                  width: 150,
-                                  height: 150,
-                                ),
-                              ],
-                            ),
+                      direction: Axis.horizontal,
+                      alignment: WrapAlignment.end,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Flutter.svg",
+                          width: 150,
+                          height: 150,
+                        ),
+                        SvgPicture.asset(
+                          "assets/Dart.svg",
+                          width: 150,
+                          height: 150,
+                        ),
+                      ],
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -139,7 +138,10 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
-                    WidthSep("GitHub", MediaQuery.of(context).size.width - 40),
+                    Padding(
+                        padding: const EdgeInsets.only(top: 50),
+                        child: WidthSep(
+                            "GitHub", MediaQuery.of(context).size.width - 40)),
                     FutureBuilder(
                         future: getRepos(),
                         builder: (context, AsyncSnapshot snap) {
@@ -167,6 +169,197 @@ class HomeView extends StatelessWidget {
                                 children: cards);
                           }
                         }),
+                    Padding(
+                        padding: const EdgeInsets.only(top: 50),
+                        child: WidthSep("Experience",
+                            MediaQuery.of(context).size.width - 40)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Container(
+                              width: 80,
+                              height: 80,
+                              color: Colors.white,
+                            ),
+                            SvgPicture.asset(
+                              "assets/Terminal.svg",
+                              width: 100,
+                              height: 100,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                              "Experience working with Microsoft command prompt/powershell and the Linux termainal." +
+                                  " Experience scripting using bash and batch. Experience using all three operating systems" +
+                                  " ,Windows, OS X, and the linux flavors Ubuntu and CentOS, and their respective uses.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Java.svg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                              "Over five years of experience using java for work, " +
+                                  "personal projects, and general scripting. This is the " +
+                                  "first language I learned back in 2017 when I took AP computer" +
+                                  " science in highschool. Thus, it should be no suprise that" +
+                                  " Java is my favorite language as it will forever hold a" +
+                                  " special place in my heart as the language that made me" +
+                                  " choose software engineering as a major.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row( //todo make method to return widget for these two rows and padding
+                    // on top and bottom of 40 each, using flaticon.com for svg searching
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/CPP.svg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                              "Experience using C++ for general coding and to complete" + 
+                              " homework for the following classes: Data Structures,"+ 
+                              " Algorithms, Microprocessors (translating C++ to PIC24 Assembly)" + 
+                              ", Discrete Systems, and Software Testing and QA. " + 
+                              "Some of the assignments I have used C++ for include but"+
+                              " are not limited to: a Binary Search Tree, an Adelson Velsky" +
+                               " Landis Tree, and an AVL post order traversal saver/loader." + 
+                               " See the GitHub tab or my GitHub page for more information.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row( //todo make method to return widget for these two rows and padding
+                    // on top and bottom of 40 each, using flaticon.com for svg searching
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 100,
+                          child: Text (
+                            "C",
+                            style: TextStyle(
+                                fontSize: 100,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                color: Colors.black,
+                              ),
+                          )
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                              "Experience using C to write operating systems" + 
+                              " homework and study the Linux kernel. Experience" + 
+                              " using C for general purpose programming." + 
+                              " With this comes an accompanying knowledge" + 
+                              " of the topic of operating systems. I hope one day to" + 
+                              " attempt to write a simple one from scratch and" + 
+                              " implement simple features such as a paging and a" + 
+                              " Native GUI Library to test my knowlege. A few of the projects" + 
+                              " I've used C for include: testing timings on a custom made" + 
+                              " thread-safe linked list versus a non-locking linked list," + 
+                              " timing Linux system calls such as fork, using pipes, and" + 
+                              " timing functions such as qsort.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
