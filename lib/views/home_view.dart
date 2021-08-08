@@ -93,25 +93,17 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       height: 100,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: 0,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Row(
+                    Wrap(
+                              direction: Axis.horizontal,
+                              alignment: WrapAlignment.end,
+                              crossAxisAlignment: WrapCrossAlignment.center,
                               children: [
                                 SvgPicture.asset(
                                   "assets/Flutter.svg",
                                   width: 150,
                                   height: 150,
                                 ),
-                                SizedBox(
-                                  width: 80,
-                                ),
+                               
                                 SvgPicture.asset(
                                   "assets/Dart.svg",
                                   width: 150,
@@ -119,27 +111,31 @@ class HomeView extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.75,
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 30),
-                                child: Text(
-                                  "I chose to write this website using Flutter/Firebase for a few reasons." +
-                                      " The first being the power of Flutter. Not only is it a UI framework" +
-                                      " for the web, iOS, Android, and desktop, but it is also a combination" +
-                                      " of an extremely high performance graphics engine and the language Dart" +
-                                      " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
-                                  textAlign: TextAlign.right,
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
-                                    color: Colors.white,
-                                  ),
-                                ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: 0,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                              "I chose to write this website using Flutter/Firebase for a few reasons." +
+                                  " The first being the power of Flutter. Not only is it a UI framework" +
+                                  " for the web, iOS, Android, and desktop, but it is also a combination" +
+                                  " of an extremely high performance graphics engine and the language Dart" +
+                                  " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                color: Colors.white,
                               ),
-                            )
-                          ],
+                            ),
+                          ),
                         )
                       ],
                     ),
