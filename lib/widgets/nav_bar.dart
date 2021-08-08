@@ -35,14 +35,15 @@ class NavigationBarState extends State<NavigationBar> {
 
     return Container(
         color: Color.fromRGBO(37, 44, 72, 1),
-        child: Flexible(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        width: MediaQuery.of(context).size.width,
+        child: Expanded (
+          child: Wrap(
+            direction: Axis.horizontal,
+            alignment: WrapAlignment.spaceBetween,
+            crossAxisAlignment: WrapCrossAlignment.center,
             children: [
-              Row(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.only(top: 20, left: 20, bottom: 10),
+              Padding(
+                      padding: EdgeInsets.only(top: 20, left: 20, bottom: 20),
                       child: Stack(
                         alignment: Alignment.center,
                         children: [
@@ -83,22 +84,24 @@ class NavigationBarState extends State<NavigationBar> {
                             ),
                           )
                         ],
-                      ))
-                ],
-              ),
-              Wrap(
-                children: [
-                  buildNavBarItem("Home", 0),
-                  SizedBox(width: 40),
-                  buildNavBarItem("GitHub", 1),
-                  SizedBox(width: 40),
-                  buildNavBarItem("Experience", 2),
-                  SizedBox(width: 40),
-                  buildNavBarItem("Resume", 3),
-                  SizedBox(width: 40),
-                  buildNavBarItem("Contact", 4),
-                  SizedBox(width: 40),
-                ],
+                      )),
+                      SizedBox(width: 100,),
+              Padding (
+                padding: const EdgeInsets.only(top: 30.0, bottom: 20.0, left: 20.0),
+                child: Wrap(
+                  children: [
+                    buildNavBarItem("Home", 0),
+                    SizedBox(width: 40),
+                    buildNavBarItem("GitHub", 1),
+                    SizedBox(width: 40),
+                    buildNavBarItem("Experience", 2),
+                    SizedBox(width: 40),
+                    buildNavBarItem("Resume", 3),
+                    SizedBox(width: 40),
+                    buildNavBarItem("Contact", 4),
+                    SizedBox(width: 40),
+                  ],
+                ),
               )
             ],
           ),
