@@ -34,4 +34,7 @@ flutter:
     - assets/Terminal.svg
     - assets/Java.svg
     - assets/CPP.svg
+    - assets/Postgres.svg
+    - assets/Python.svg
+    - assets/Matlab.png
     

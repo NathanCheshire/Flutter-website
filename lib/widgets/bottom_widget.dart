@@ -25,7 +25,8 @@ class BottomWidget extends StatelessWidget {
                     width: 300,
                     height: 100,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
+                      padding: const EdgeInsets.only(top: 30.0),
+                      //todo gesture detector here, fonts for seps, fonts for cards, last updated for cards
                       child: Text(
                           "Click here to view this very webapp's source on GitHub",
                           style: GoogleFonts.ubuntu(

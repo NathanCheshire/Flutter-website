@@ -71,21 +71,20 @@ class HomeView extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 30),
                                 child: Text(
-                                  "Greetings and welcome to my personal webapp portfolio! " +
-                                      "I attend Mississippi State University (Baseball National " +
-                                      "Champions for the NCAA 2021 season might I add) for software " +
-                                      "engineering and mathematics. I chose " +
-                                      "MSU because of the excellent engineering programs, great community," +
-                                      " and the scholarships I received, among of which was a scholarhsip for " +
-                                      "being an Eagle Scout which I was very happy to learn about.",
-                                  style: GoogleFonts.robotoCondensed(
-                                  textStyle: TextStyle(
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                )
-                                ),
+                                    "Greetings and welcome to my personal webapp portfolio! " +
+                                        "I attend Mississippi State University (Baseball National " +
+                                        "Champions for the NCAA 2021 season might I add) for software " +
+                                        "engineering and mathematics. I chose " +
+                                        "MSU because of the excellent engineering programs, great community," +
+                                        " and the scholarships I received, among of which was a scholarhsip for " +
+                                        "being an Eagle Scout which I was very happy to learn about.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      textStyle: TextStyle(
+                                        fontSize: 28,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    )),
                               ),
                             )
                           ],
@@ -123,20 +122,19 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                              "I chose to write this website using Flutter/Firebase for a few reasons." +
-                                  " The first being the power of Flutter. Not only is it a UI framework" +
-                                  " for the web, iOS, Android, and desktop, but it is also a combination" +
-                                  " of an extremely high performance graphics engine and the language Dart" +
-                                  " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
-                              textAlign: TextAlign.right,
-                              style: GoogleFonts.robotoCondensed(
+                                "I chose to write this website using Flutter/Firebase for a few reasons." +
+                                    " The first being the power of Flutter. Not only is it a UI framework" +
+                                    " for the web, iOS, Android, and desktop, but it is also a combination" +
+                                    " of an extremely high performance graphics engine and the language Dart" +
+                                    " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
+                                textAlign: TextAlign.right,
+                                style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
                                     fontSize: 28,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
-                                )
-                            ),
+                                )),
                           ),
                         )
                       ],
@@ -206,18 +204,17 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                              "Experience working with Microsoft command prompt/powershell and the Linux termainal." +
-                                  " Experience scripting using bash and batch. Experience using all three operating systems" +
-                                  " ,Windows, OS X, and the linux flavors Ubuntu and CentOS, and their respective uses.",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.robotoCondensed(
+                                "Experience working with Microsoft command prompt/powershell and the Linux termainal." +
+                                    " Experience scripting using bash and batch. Experience using all three operating systems" +
+                                    " ,Windows, OS X, and the linux flavors Ubuntu and CentOS, and their respective uses.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
-                                )
-                            ),
+                                )),
                           ),
                         )
                       ],
@@ -245,22 +242,21 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                              "Over five years of experience using java for work, " +
-                                  "personal projects, and general scripting. This is the " +
-                                  "first language I learned back in 2017 when I took AP computer" +
-                                  " science in highschool. Thus, it should be no suprise that" +
-                                  " Java is my favorite language as it will forever hold a" +
-                                  " special place in my heart as the language that made me" +
-                                  " choose software engineering as a major.",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.robotoCondensed(
+                                "Over five years of experience using java for work, " +
+                                    "personal projects, and general scripting. This is the " +
+                                    "first language I learned back in 2017 when I took AP computer" +
+                                    " science in highschool. Thus, it should be no suprise that" +
+                                    " Java is my favorite language as it will forever hold a" +
+                                    " special place in my heart as the language that made me" +
+                                    " choose software engineering as a major.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
-                                )
-                            ),
+                                )),
                           ),
                         )
                       ],
@@ -290,23 +286,22 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                              "Experience using C++ for general coding and to complete" +
-                                  " homework for the following classes: Data Structures," +
-                                  " Algorithms, Microprocessors (translating C++ to PIC24 Assembly)" +
-                                  ", Discrete Systems, and Software Testing and QA. " +
-                                  "Some of the assignments I have used C++ for include but" +
-                                  " are not limited to: a Binary Search Tree, an Adelson Velsky" +
-                                  " Landis Tree, and an AVL post order traversal saver/loader." +
-                                  " See the GitHub tab or my GitHub page for more information.",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.robotoCondensed(
+                                "Experience using C++ for general coding and to complete" +
+                                    " homework for the following classes: Data Structures," +
+                                    " Algorithms, Microprocessors (translating C++ to PIC24 Assembly)" +
+                                    ", Discrete Systems, and Software Testing and QA. " +
+                                    "Some of the assignments I have used C++ for include but" +
+                                    " are not limited to: a Binary Search Tree, an Adelson Velsky" +
+                                    " Landis Tree, and an AVL post order traversal saver/loader." +
+                                    " See the GitHub tab or my GitHub page for more information.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
-                                )
-                            ),
+                                )),
                           ),
                         )
                       ],
@@ -354,6 +349,124 @@ class HomeView extends StatelessWidget {
                                     " thread-safe linked list versus a non-locking linked list," +
                                     " timing Linux system calls such as fork, using pipes, and" +
                                     " timing functions such as qsort.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 80),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Postgres.svg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                                "Experience using relational databases such as Postgres " +
+                                    "and MySQL to perform standard CRUD (Create, Read, Update, Delete) " +
+                                    "operations. Experience writing querries, creating databases, and " +
+                                    "using databases with languages such as Python and Java.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                     SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Python.svg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text("Experience using Python to complete general side projects." + 
+                            " I use this language if I need to script up a simple tool quickly. " + 
+                            "Experience using Tensorflow/keras and other libraries to complete a facial" + 
+                            " recognition project. " + "I am extemely comforable using Python to complete any project.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        new Container(
+                          width: 150.0,
+                          height: 150.0,
+                          alignment: Alignment.center,
+                          decoration: new BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('Matlab.png'),
+                                fit: BoxFit.fill),
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text("Experience using Matlab to maniuplate data" + 
+                            " stored in netCDF format. Experience producing contour plots" + 
+                            " using Matlab. Experience scripting in Matlab to correct data," + 
+                            " track currents, and deal with layers.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
