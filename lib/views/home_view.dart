@@ -8,6 +8,7 @@ import 'package:flutter_website/widgets/width_separator.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
 import 'package:flutter_website/widgets/github_card.dart';
 import 'package:flutter_website/widgets/nav_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
 class HomeView extends StatelessWidget {
@@ -77,12 +78,13 @@ class HomeView extends StatelessWidget {
                                       "MSU because of the excellent engineering programs, great community," +
                                       " and the scholarships I received, among of which was a scholarhsip for " +
                                       "being an Eagle Scout which I was very happy to learn about.",
-                                  style: TextStyle(
-                                    fontSize: 24,
+                                  style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 28,
                                     fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
                                     color: Colors.white,
                                   ),
+                                )
                                 ),
                               ),
                             )
@@ -127,12 +129,13 @@ class HomeView extends StatelessWidget {
                                   " of an extremely high performance graphics engine and the language Dart" +
                                   " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
                               textAlign: TextAlign.right,
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Roboto",
-                                color: Colors.white,
-                              ),
+                              style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )
                             ),
                           ),
                         )
@@ -207,12 +210,13 @@ class HomeView extends StatelessWidget {
                                   " Experience scripting using bash and batch. Experience using all three operating systems" +
                                   " ,Windows, OS X, and the linux flavors Ubuntu and CentOS, and their respective uses.",
                               textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Roboto",
-                                color: Colors.white,
-                              ),
+                              style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )
                             ),
                           ),
                         )
@@ -249,12 +253,13 @@ class HomeView extends StatelessWidget {
                                   " special place in my heart as the language that made me" +
                                   " choose software engineering as a major.",
                               textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Roboto",
-                                color: Colors.white,
-                              ),
+                              style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )
                             ),
                           ),
                         )
@@ -263,8 +268,9 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       height: 80,
                     ),
-                    Row( //todo make method to return widget for these two rows and padding
-                    // on top and bottom of 40 each, using flaticon.com for svg searching
+                    Row(
+                      //todo make method to return widget for these two rows and padding
+                      // on top and bottom of 40 each, using flaticon.com for svg searching
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -284,21 +290,22 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                              "Experience using C++ for general coding and to complete" + 
-                              " homework for the following classes: Data Structures,"+ 
-                              " Algorithms, Microprocessors (translating C++ to PIC24 Assembly)" + 
-                              ", Discrete Systems, and Software Testing and QA. " + 
-                              "Some of the assignments I have used C++ for include but"+
-                              " are not limited to: a Binary Search Tree, an Adelson Velsky" +
-                               " Landis Tree, and an AVL post order traversal saver/loader." + 
-                               " See the GitHub tab or my GitHub page for more information.",
+                              "Experience using C++ for general coding and to complete" +
+                                  " homework for the following classes: Data Structures," +
+                                  " Algorithms, Microprocessors (translating C++ to PIC24 Assembly)" +
+                                  ", Discrete Systems, and Software Testing and QA. " +
+                                  "Some of the assignments I have used C++ for include but" +
+                                  " are not limited to: a Binary Search Tree, an Adelson Velsky" +
+                                  " Landis Tree, and an AVL post order traversal saver/loader." +
+                                  " See the GitHub tab or my GitHub page for more information.",
                               textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Roboto",
-                                color: Colors.white,
-                              ),
+                              style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )
                             ),
                           ),
                         )
@@ -307,24 +314,23 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       height: 80,
                     ),
-                    Row( //todo make method to return widget for these two rows and padding
-                    // on top and bottom of 40 each, using flaticon.com for svg searching
+                    Row(
+                      //todo make method to return widget for these two rows and padding
+                      // on top and bottom of 40 each, using flaticon.com for svg searching
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          width: 100,
-                          height: 100,
-                          child: Text (
-                            "C",
-                            style: TextStyle(
-                                fontSize: 100,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Roboto",
-                                color: Colors.black,
-                              ),
-                          )
-                        )
+                            width: 100,
+                            height: 100,
+                            child: Text("C",
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 100,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                )))
                       ],
                     ),
                     Row(
@@ -336,26 +342,26 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                              "Experience using C to write operating systems" + 
-                              " homework and study the Linux kernel. Experience" + 
-                              " using C for general purpose programming." + 
-                              " With this comes an accompanying knowledge" + 
-                              " of the topic of operating systems. I hope one day to" + 
-                              " attempt to write a simple one from scratch and" + 
-                              " implement simple features such as a paging and a" + 
-                              " Native GUI Library to test my knowlege. A few of the projects" + 
-                              " I've used C for include: testing timings on a custom made" + 
-                              " thread-safe linked list versus a non-locking linked list," + 
-                              " timing Linux system calls such as fork, using pipes, and" + 
-                              " timing functions such as qsort.",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Roboto",
-                                color: Colors.white,
-                              ),
-                            ),
+                                "Experience using C to write operating systems" +
+                                    " homework and study the Linux kernel. Experience" +
+                                    " using C for general purpose programming." +
+                                    " With this comes an accompanying knowledge" +
+                                    " of the topic of operating systems. I hope one day to" +
+                                    " attempt to write a simple one from scratch and" +
+                                    " implement simple features such as a paging and a" +
+                                    " Native GUI Library to test my knowlege. A few of the projects" +
+                                    " I've used C for include: testing timings on a custom made" +
+                                    " thread-safe linked list versus a non-locking linked list," +
+                                    " timing Linux system calls such as fork, using pipes, and" +
+                                    " timing functions such as qsort.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
                           ),
                         )
                       ],

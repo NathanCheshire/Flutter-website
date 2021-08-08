@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: camel_case_types
 class BottomWidget extends StatelessWidget {
@@ -18,34 +19,7 @@ class BottomWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 50.0, right: 50.0),
             child: Wrap(
               children: [
-                Padding (
-                  padding: const EdgeInsets.only(left: 40, right: 40),
-                  child: Container(
-                    width: 300,
-                    height: 100,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 30.0),
-                      child: Text(
-                        "Webapp GitHub Source: https://github.com/NathanCheshire/Flutter-website",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Roboto",
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding (
-                  padding: const EdgeInsets.only(top: 30, right: 15),
-                  child: Icon(
-                    Icons.speaker_notes,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                ),
-                Padding (
+                Padding(
                   padding: const EdgeInsets.only(right: 40),
                   child: Container(
                     width: 300,
@@ -53,14 +27,41 @@ class BottomWidget extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: Text(
-                        "Questions, comments, concerns? DM me through the website using your account (go ahead and create one if you haven't yet)",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Roboto",
-                          color: Colors.white,
-                        ),
-                      ),
+                          "Click here to view this very webapp's source on GitHub",
+                          style: GoogleFonts.ubuntu(
+                            textStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          )),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, right: 15),
+                  child: Icon(
+                    Icons.speaker_notes,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 40),
+                  child: Container(
+                    width: 300,
+                    height: 100,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Text(
+                          "Questions, comments, concerns? Reach me at GitHub.com/NathanCheshire or Nathan.Vincent.2.718@gmail.com",
+                          style: GoogleFonts.ubuntu(
+                            textStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          )),
                     ),
                   ),
                 ),
