@@ -588,9 +588,10 @@ class HomeView extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.75,
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
-                            child: Text("Experience writing in pure x86_64 and PIC24 (microcontroller) assembly. Knowledge of" + 
-                            " the instructions sets. Knowledge on how to read assembly instruciton sets and properly write" + 
-                            " in assembly.",
+                            child: Text(
+                                "Experience writing in pure x86_64 and PIC24 (microcontroller) assembly. Knowledge of" +
+                                    " the instructions sets. Knowledge on how to read assembly instruciton sets and properly write" +
+                                    " in assembly.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
@@ -603,6 +604,42 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
+                    Padding(
+                        padding: const EdgeInsets.only(top: 50.0),
+                        child: WidthSep(
+                            "Resume", MediaQuery.of(context).size.width - 40)),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding (
+                            padding: const EdgeInsets.only(top: 40),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              child: Padding (
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  'Click here to download my resume',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              style: OutlinedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 3.0, color: Colors.white)),
+                            ),
+                          )
+                        ]),
+                    Padding(
+                        padding: const EdgeInsets.only(top: 50.0),
+                        child: WidthSep(
+                            "Contact", MediaQuery.of(context).size.width - 40)),
+                    Row(children: [
+                      //todo contac methods left aligned text with new lines
+                    ]),
                   ],
                 ),
               ),
