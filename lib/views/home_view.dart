@@ -653,28 +653,73 @@ class HomeView extends StatelessWidget {
                             "Contact", MediaQuery.of(context).size.width - 40)),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
                         children: [
-                          Container(
-                              width: MediaQuery.of(context).size.width * 0.75,
-                              child: GestureDetector(
-                                onTap: (() {
-                                  _launchInBrowser(
-                                      "https://www.youtube.com/channel/UCCboiQ37tWNwiCTv9iVPabA");
-                                }),
-                                child: Text(
-                                    "Email: Nathan.Vincent.2.718@gmail.com\nGitHub: NathanCheshire\nYouTube: [Click to open]",
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.robotoCondensed(
-                                      textStyle: TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
-                                    )),
-                              ))
+                          GestureDetector(
+                            onTap: (() {
+                              _launchInBrowser("");
+                            }),
+                            child: SvgPicture.asset(
+                              "assets/Gmail.svg",
+                              width: 75,
+                              height: 75,
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 20.0, top: 30.0),
+                            child: Text("Nathan.Vincent.2.718@gmail.com",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
+                        children: [
+                          GestureDetector(
+                              onTap: (() {
+                                _launchInBrowser("");
+                              }),
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Container(
+                                    width: 74,
+                                    height: 74,
+                                    color: Colors.white,
+                                    //TODO box decoration rounded corners
+                                  ),
+                                  SvgPicture.asset(
+                                    "assets/GitHub.svg",
+                                    width: 75,
+                                    height: 75,
+                                  ),
+                                ],
+                              )),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 20.0, top: 30.0),
+                            child: Text("GitHub.com/NathanCheshire",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
                         ],
                       ),
                     ),

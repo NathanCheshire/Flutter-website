@@ -40,4 +40,7 @@ flutter:
     - assets/Matlab.png
     - assets/Mathematica.svg
     - assets/Office.svg
+    - assets/Gmail.svg
+    - assets/YouTube.svg
+    - assets/GitHub.svg
     
