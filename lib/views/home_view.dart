@@ -697,8 +697,13 @@ class HomeView extends StatelessWidget {
                                   Container(
                                     width: 74,
                                     height: 74,
-                                    color: Colors.white,
-                                    //TODO box decoration rounded corners
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border: Border.all(
+                                          color: Colors.white,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                   ),
                                   SvgPicture.asset(
                                     "assets/GitHub.svg",
