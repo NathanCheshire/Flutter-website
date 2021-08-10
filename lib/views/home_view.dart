@@ -10,9 +10,23 @@ import 'package:flutter_website/widgets/github_card.dart';
 import 'package:flutter_website/widgets/nav_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   final controller = ScrollController();
 
@@ -612,11 +626,11 @@ class HomeView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding (
+                          Padding(
                             padding: const EdgeInsets.only(top: 40),
                             child: OutlinedButton(
                               onPressed: () {},
-                              child: Padding (
+                              child: Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: Text(
                                   'Click here to download my resume',
@@ -628,8 +642,8 @@ class HomeView extends StatelessWidget {
                                 ),
                               ),
                               style: OutlinedButton.styleFrom(
-                                  side:
-                                      BorderSide(width: 3.0, color: Colors.white)),
+                                  side: BorderSide(
+                                      width: 3.0, color: Colors.white)),
                             ),
                           )
                         ]),
@@ -637,9 +651,33 @@ class HomeView extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 50.0),
                         child: WidthSep(
                             "Contact", MediaQuery.of(context).size.width - 40)),
-                    Row(children: [
-                      //todo contac methods left aligned text with new lines
-                    ]),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                              width: MediaQuery.of(context).size.width * 0.75,
+                              child: GestureDetector(
+                                onTap: (() {
+                                  _launchInBrowser(
+                                      "https://www.youtube.com/channel/UCCboiQ37tWNwiCTv9iVPabA");
+                                }),
+                                child: Text(
+                                    "Email: Nathan.Vincent.2.718@gmail.com\nGitHub: NathanCheshire\nYouTube: [Click to open]",
+                                    textAlign: TextAlign.center,
+                                    style: GoogleFonts.robotoCondensed(
+                                      textStyle: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    )),
+                              ))
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

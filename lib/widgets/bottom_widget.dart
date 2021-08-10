@@ -64,7 +64,6 @@ class BottomWidget extends StatelessWidget {
               ),
               Wrap(
                 children: [
-                  
                   Padding(
                     padding: const EdgeInsets.only(right: 40),
                     child: Container(
