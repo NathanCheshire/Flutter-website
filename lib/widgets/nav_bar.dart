@@ -90,7 +90,7 @@ class NavigationBarState extends State<NavigationBar> {
                 padding: const EdgeInsets.only(top: 30.0, bottom: 20.0, left: 20.0),
                 child: Wrap(
                   children: [
-                    buildNavBarItem("Home", 0),
+                    buildNavBarItem("Myself", 0),
                     SizedBox(width: 40),
                     buildNavBarItem("GitHub", 1),
                     SizedBox(width: 40),

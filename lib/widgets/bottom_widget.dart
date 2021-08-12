@@ -72,7 +72,7 @@ class BottomWidget extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                         child: Text(
-                            "Questions, comments, concerns? Reach me at GitHub.com/NathanCheshire or Nathan.Vincent.2.718@gmail.com",
+                            "Questions, comments, concerns? Check out the contact section by clicking on contact in the nav bar",
                             style: GoogleFonts.ubuntu(
                               textStyle: TextStyle(
                                 fontSize: 16,

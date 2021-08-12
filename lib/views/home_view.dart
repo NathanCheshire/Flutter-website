@@ -69,39 +69,43 @@ class HomeView extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   children: [
                     WidthSep("Home", MediaQuery.of(context).size.width - 40),
+                    Wrap(
+                      direction: Axis.horizontal,
+                      alignment: WrapAlignment.start,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/BlackBelt.svg",
+                          width: 150,
+                          height: 150,
+                        ),
+                        SizedBox(width: 50,),
+                        SvgPicture.asset(
+                          "assets/Dumbell.svg",
+                          width: 150,
+                          height: 150,
+                        ),
+                      ],
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SvgPicture.asset(
-                              "assets/MSU.svg",
-                              width: 150,
-                              height: 150,
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.75,
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 30),
-                                child: Text(
-                                    "Greetings and welcome to my personal webapp portfolio! " +
-                                        "I attend Mississippi State University (Baseball National " +
-                                        "Champions for the NCAA 2021 season might I add) for software " +
-                                        "engineering and mathematics. I chose " +
-                                        "MSU because of the excellent engineering programs, great community," +
-                                        " and the scholarships I received, among of which was a scholarhsip for " +
-                                        "being an Eagle Scout which I was very happy to learn about.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      textStyle: TextStyle(
-                                        fontSize: 28,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
-                                    )),
-                              ),
-                            )
-                          ],
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Text(
+                                "Greetings and welcome to my personal webapp portfolio! " +
+                                    "I attend Mississippi State University for software " +
+                                    "engineering and mathematics. I enjoy body building and fitness, programming, and hiking in my free time. I'm an Eagle Scout and have a second degree black belt in taekwondo. I'm an INFJ-A Meyers-Briggs type and a type one enneagram.",
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
                         )
                       ],
                     ),
@@ -459,7 +463,7 @@ class HomeView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        new Container(
+                        Container(
                           width: 150.0,
                           height: 150.0,
                           alignment: Alignment.center,
@@ -669,7 +673,7 @@ class HomeView extends StatelessWidget {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 20.0, top: 30.0),
-                            child: Text("Nathan.Vincent.2.718@gmail.com",
+                            child: Text("Nate@NathanCheshire.com",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
@@ -716,6 +720,41 @@ class HomeView extends StatelessWidget {
                             padding:
                                 const EdgeInsets.only(left: 20.0, top: 30.0),
                             child: Text("GitHub.com/NathanCheshire",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.robotoCondensed(
+                                  textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                )),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
+                        children: [
+                          GestureDetector(
+                              onTap: (() {
+                                _launchInBrowser("");
+                              }),
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    "assets/Discord.svg",
+                                    width: 75,
+                                    height: 75,
+                                  ),
+                                ],
+                              )),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 20.0, top: 30.0),
+                            child: Text("Natche#8845",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
