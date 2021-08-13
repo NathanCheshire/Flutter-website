@@ -224,7 +224,7 @@ class HomeView extends StatelessWidget {
                             child: Text(
                                 "Experience working with Microsoft command prompt/powershell and the Linux termainal." +
                                     " Experience scripting using bash and batch. Experience using all three operating systems" +
-                                    " ,Windows, OS X, and the linux flavors Ubuntu and CentOS, and their respective uses.",
+                                    ", Windows, OS X, and the linux flavors Ubuntu and CentOS, and their respective uses.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
@@ -260,7 +260,7 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                                "Over five years of experience using java for work, " +
+                                "Over five years of experience using Java for work, " +
                                     "personal projects, and general scripting. This is the " +
                                     "first language I learned back in 2017 when I took AP computer" +
                                     " science in highschool. Thus, it should be no suprise that" +
@@ -441,7 +441,7 @@ class HomeView extends StatelessWidget {
                             child: Text(
                                 "Experience using Python to complete general side projects." +
                                     " I use this language if I need to script up a simple tool quickly. " +
-                                    "Experience using Tensorflow/keras and other libraries to complete a facial" +
+                                    "Light experience using Tensorflow/Keras and other libraries to complete a facial" +
                                     " recognition project. " +
                                     "I am extemely comforable using Python to complete any project.",
                                 textAlign: TextAlign.left,
@@ -484,10 +484,11 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                                "Experience using Matlab to maniuplate data" +
+                                "Experience using Matlab to manipulate data" +
                                     " stored in netCDF format. Experience producing contour plots" +
                                     " using Matlab. Experience scripting in Matlab to correct data," +
-                                    " track currents, and deal with layers.",
+                                    " track ocean currents, monitor variables such as surface velocity," +
+                                    " salinity, and temperature, and deal with layers.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
@@ -607,7 +608,7 @@ class HomeView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Text(
-                                "Experience writing in pure x86_64 and PIC24 (microcontroller) assembly. Knowledge of" +
+                                "Experience writing in raw x86_64 and PIC24 (microcontroller) assembly. Knowledge of" +
                                     " the instructions sets. Knowledge on how to read assembly instruciton sets and properly write" +
                                     " in assembly.",
                                 textAlign: TextAlign.left,

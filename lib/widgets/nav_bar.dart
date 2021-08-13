@@ -123,7 +123,7 @@ class NavigationBarState extends State<NavigationBar> {
           onTap: () {
             setCurrentIndex(index);
             controller.animateTo(
-              index == 0 ? 0 : 800.0,
+              index == 0 ? 0 : 0  ,
               duration: Duration(seconds: 1),
               curve: Curves.fastOutSlowIn,
             );
