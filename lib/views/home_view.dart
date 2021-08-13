@@ -64,6 +64,7 @@ class HomeView extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(
                     top: 0, bottom: 0, left: 20, right: 20),
+                    //main list view to hold entire scroll, replace with tab view
                 child: ListView(
                   controller: controller,
                   physics: BouncingScrollPhysics(),
