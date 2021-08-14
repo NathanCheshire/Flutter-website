@@ -51,7 +51,7 @@ class BottomWidget extends StatelessWidget {
                               "https://github.com/NathanCheshire/Flutter-website");
                         }),
                         child: Text(
-                            "Click here to view this very webapp's source on GitHub",
+                            "Click here to view this webapp's source on GitHub",
                             style: GoogleFonts.ubuntu(
                               textStyle: TextStyle(
                                 fontSize: 16,
@@ -72,7 +72,8 @@ class BottomWidget extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                         child: Text(
-                            "Questions, comments, concerns? Check out the contact section by clicking on contact in the nav bar",
+                            "Questions, comments, or concerns? Contact me by" + 
+                            " checking out the contact section in the navigation bar",
                             style: GoogleFonts.ubuntu(
                               textStyle: TextStyle(
                                 fontSize: 16,

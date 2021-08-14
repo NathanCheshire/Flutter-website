@@ -30,120 +30,122 @@ class ContactSection extends StatelessWidget {
     return Container(
       color: tabContainerColor,
       child: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              children: [
-                GestureDetector(
-                  onTap: (() {
-                    _launchInBrowser("");
-                  }),
-                  child: SvgPicture.asset(
-                    "assets/Gmail.svg",
-                    width: 75,
-                    height: 75,
+          child: SingleChildScrollView(
+            child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: (() {
+                      _launchInBrowser("");
+                    }),
+                    child: SvgPicture.asset(
+                      "assets/Gmail.svg",
+                      width: 75,
+                      height: 75,
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 30.0),
-                  child: Text("Nate@NathanCheshire.com",
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.robotoCondensed(
-                        textStyle: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      )),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: Text("Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.robotoCondensed(
+                          textStyle: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        )),
+                  ),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              children: [
-                GestureDetector(
-                    onTap: (() {
-                      _launchInBrowser("");
-                    }),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                          width: 74,
-                          height: 74,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  GestureDetector(
+                      onTap: (() {
+                        _launchInBrowser("");
+                      }),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                            width: 74,
+                            height: 74,
+                            decoration: BoxDecoration(
                                 color: Colors.white,
-                              ),
-                              borderRadius: BorderRadius.circular(20)),
-                        ),
-                        SvgPicture.asset(
-                          "assets/GitHub.svg",
-                          width: 75,
-                          height: 75,
-                        ),
-                      ],
-                    )),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 30.0),
-                  child: Text("GitHub.com/NathanCheshire",
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.robotoCondensed(
-                        textStyle: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
+                                border: Border.all(
+                                  color: Colors.white,
+                                ),
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                          SvgPicture.asset(
+                            "assets/GitHub.svg",
+                            width: 75,
+                            height: 75,
+                          ),
+                        ],
                       )),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 30.0),
+                    child: Text("GitHub.com/NathanCheshire",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.robotoCondensed(
+                          textStyle: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        )),
+                  ),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              children: [
-                GestureDetector(
-                    onTap: (() {
-                      _launchInBrowser("");
-                    }),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          "assets/Discord.svg",
-                          width: 75,
-                          height: 75,
-                        ),
-                      ],
-                    )),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 30.0),
-                  child: Text("Natche#8845",
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.robotoCondensed(
-                        textStyle: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  GestureDetector(
+                      onTap: (() {
+                        _launchInBrowser("");
+                      }),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            "assets/Discord.svg",
+                            width: 75,
+                            height: 75,
+                          ),
+                        ],
                       )),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 30.0),
+                    child: Text("Natche#8845",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.robotoCondensed(
+                          textStyle: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        )),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
-      )),
+                  ],
+                ),
+          )),
     );
   }
 }
