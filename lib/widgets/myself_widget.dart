@@ -51,7 +51,12 @@ class MyselfSection extends StatelessWidget {
                     child: Text(
                         "Greetings and welcome to my personal webapp portfolio! " +
                             "I attend Mississippi State University for software " +
-                            "engineering and mathematics. I enjoy body building and fitness, programming, and hiking in my free time. I'm an Eagle Scout and have a second degree black belt in taekwondo. I'm an INFJ-A Meyers-Briggs type and a type one enneagram.",
+                            "engineering and mathematics. I enjoy body building and " + 
+                            "fitness, programming, and hiking in my free time. I am very" + 
+                            " proud of two awards in particular which I have achieved. " + 
+                            "Those awards are: the highest rank a Boy Scout can earn," + 
+                            " that of Eagle Scout, and second degree black belt in Taekwondo." + 
+                            " I'm also an INFJ-A Meyers-Briggs type and a type one enneagram.",
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
                             fontSize: 28,

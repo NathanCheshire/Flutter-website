@@ -1,8 +1,8 @@
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ResumeSection extends StatelessWidget {
   const ResumeSection({
@@ -13,6 +13,19 @@ class ResumeSection extends StatelessWidget {
   final Color tabContainerColor;
   final double resumeWidth = 897.0;
   final double resumeHeight = 1162.0;
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,11 +67,13 @@ class ResumeSection extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 40),
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _launchInBrowser("https://drive.google.com/file/d/1CWJ7wIMhRE8-GubCvvIMExb0wJ0M-Gdk/view?usp=sharing");
+                          },
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
-                              'Click here to download my resume',
+                              'Click here to view my official resume',
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.w500,
@@ -67,7 +82,8 @@ class ResumeSection extends StatelessWidget {
                             ),
                           ),
                           style: OutlinedButton.styleFrom(
-                              side: BorderSide(width: 3.0, color: Colors.white)),
+                              side:
+                                  BorderSide(width: 3.0, color: Colors.white)),
                         ),
                       )
                     ]),

@@ -29,49 +29,63 @@ class MyApp extends StatelessWidget {
                 toolbarHeight: 120,
                 backgroundColor: Color.fromRGBO(37, 44, 72, 1),
                 foregroundColor: Colors.white,
-                title: Padding(
-                    padding: EdgeInsets.only(top: 20, left: 20, bottom: 20),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                            height: 50,
-                            width: 220,
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [Colors.white, Colors.white],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(14)),
-                            )),
-                        Container(
-                            height: 45,
-                            width: 215,
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  Color.fromRGBO(37, 44, 72, 1),
-                                  Color.fromRGBO(37, 44, 72, 1)
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(14)),
-                            )),
-                        Text(
-                          "NathanCheshire.com",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Roboto",
-                            color: Colors.white,
-                          ),
-                        )
-                      ],
-                    )),
+                title: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 20, left: 20, bottom: 20),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                              height: 50,
+                              width: 220,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [Colors.white, Colors.white],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(14)),
+                              )),
+                          Container(
+                              height: 45,
+                              width: 215,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color.fromRGBO(37, 44, 72, 1),
+                                    Color.fromRGBO(37, 44, 72, 1)
+                                  ],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(14)),
+                              )),
+                          Text(
+                            "NathanCheshire.com",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Roboto",
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.all(10.0),
+                    //   child: Column(
+                    //     children: [
+                    //       Line(color: Color(0xffF8B7CD)),
+                    //       Line(color: Color(0xff0671B7)),
+                    //     ],
+                    //   ),
+                    // ),
+                  ],
+                ),
                 bottom: const TabBar(indicatorColor: Colors.white, tabs: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
@@ -146,4 +160,46 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
     );
   }
+}
+
+class Line extends StatelessWidget {
+  final Color color;
+
+  Line({required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: color,
+      height: 10,
+      width: MediaQuery.of(context).size.width - 300,
+    );
+  }
+}
+
+class SineWave extends CustomClipper<Path> {
+  @override
+  getClip(Size size) {
+    var path = new Path();
+
+    path.lineTo(0, size.height / 4.25);
+    var firstControlPoint = new Offset(size.width / 4, size.height / 3);
+    var firstEndPoint = new Offset(size.width / 2, size.height / 3 - 60);
+    var secondControlPoint =
+        new Offset(size.width - (size.width / 4), size.height / 4 - 65);
+    var secondEndPoint = new Offset(size.width, size.height / 3 - 40);
+
+    path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
+        firstEndPoint.dx, firstEndPoint.dy);
+    path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
+        secondEndPoint.dx, secondEndPoint.dy);
+
+    path.lineTo(size.width, size.height / 3);
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper oldClipper) => true;
 }
