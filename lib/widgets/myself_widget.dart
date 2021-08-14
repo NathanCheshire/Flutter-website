@@ -175,7 +175,77 @@ class MyselfSection extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 100),
+            Center(
+              child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 5.0),
+                  child: Text("Cyder widgets",
+                      style: GoogleFonts.robotoCondensed(
+                        textStyle: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )),
+                ),
+              ),
+            ),
+            Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsets.only(top: 0, bottom: 10, left: 0, right: 0),
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: MediaQuery.of(context).size.width - 80,
+                      height: 3,
+                      color: Colors.white,
+                    ),
+                  ),
+                ]),
+            PaddedPNG(image: "Weather.png", width: 450.0, height: 600.0),
+            PaddedPNG(image: "Login.png", width: 600.0, height: 400.0),
+            PaddedPNG(image: "Prefs.png", width: 900.0, height: 700.0),
+            PaddedPNG(image: "TempConverter.png", width: 600.0, height: 340.0),
+            PaddedPNG(image: "Dir.png", width: 620.0, height: 470.0),
+            PaddedPNG(image: "Calculator.png", width: 400.0, height: 595.0),
+            PaddedPNG(image: "Notes.png", width: 600.0, height: 625.0),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class PaddedPNG extends StatelessWidget {
+  final String image;
+  final double width;
+  final double height;
+  const PaddedPNG({
+    required this.image, required this.width, required this.height,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 50.0, bottom: 50.0),
+      child: Center(
+        child: Expanded(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Container(
+              width: this.width,
+              height: this.height,
+              alignment: Alignment.center,
+              decoration: new BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(this.image), fit: BoxFit.fill),
+              ),
+            ),
+          ),
         ),
       ),
     );

@@ -48,4 +48,10 @@ flutter:
     - assets/GitHub.svg
     - assets/ResumeBlur.png
     - assets/CyderIcon.png
-    
+    - assets/Login.png
+    - assets/Dir.png
+    - assets/Weather.png
+    - assets/Notes.png
+    - assets/TempConverter.png
+    - assets/Calculator.png
+    - assets/Prefs.png
