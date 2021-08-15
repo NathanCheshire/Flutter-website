@@ -31,10 +31,10 @@ class ContactSection extends StatelessWidget {
       color: tabContainerColor,
       child: Center(
           child: SingleChildScrollView(
-            child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Wrap(
@@ -52,7 +52,8 @@ class ContactSection extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0, top: 10.0),
-                    child: Text("Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
+                    child: Text(
+                        "Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
@@ -71,29 +72,15 @@ class ContactSection extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 children: [
                   GestureDetector(
-                      onTap: (() {
-                        _launchInBrowser("");
-                      }),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            width: 74,
-                            height: 74,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                  color: Colors.white,
-                                ),
-                                borderRadius: BorderRadius.circular(20)),
-                          ),
-                          SvgPicture.asset(
-                            "assets/GitHub.svg",
-                            width: 75,
-                            height: 75,
-                          ),
-                        ],
-                      )),
+                    onTap: (() {
+                      _launchInBrowser("");
+                    }),
+                    child: SvgPicture.asset(
+                      "assets/Github.svg",
+                      width: 75,
+                      height: 75,
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0, top: 30.0),
                     child: Text("GitHub.com/NathanCheshire",
@@ -143,9 +130,9 @@ class ContactSection extends StatelessWidget {
                 ],
               ),
             ),
-                  ],
-                ),
-          )),
+          ],
+        ),
+      )),
     );
   }
 }

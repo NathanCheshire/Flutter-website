@@ -30,28 +30,4 @@ flutter:
   uses-material-design: true
 
   assets: 
-    - assets/MSU.svg
-    - assets/Flutter.svg
-    - assets/Dart.svg
-    - assets/Terminal.svg
-    - assets/Java.svg
-    - assets/CPP.svg
-    - assets/Postgres.svg
-    - assets/Python.svg
-    - assets/Matlab.png
-    - assets/Mathematica.svg
-    - assets/Office.svg
-    - assets/Gmail.svg
-    - assets/Discord.svg
-    - assets/Dumbell.svg
-    - assets/BlackBelt.svg
-    - assets/GitHub.svg
-    - assets/ResumeBlur.png
-    - assets/CyderIcon.png
-    - assets/Login.png
-    - assets/Dir.png
-    - assets/Weather.png
-    - assets/Notes.png
-    - assets/TempConverter.png
-    - assets/Calculator.png
-    - assets/Prefs.png
+    - assets/

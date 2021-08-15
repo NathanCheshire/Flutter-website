@@ -52,7 +52,7 @@ class ResumeSection extends StatelessWidget {
                           alignment: Alignment.center,
                           decoration: new BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage('ResumeBlur.png'),
+                                image: AssetImage('assets/ResumeBlur.png'),
                                 fit: BoxFit.fill),
                           ),
                         ),

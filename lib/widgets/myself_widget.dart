@@ -120,7 +120,8 @@ class MyselfSection extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: new BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('CyderIcon.png'), fit: BoxFit.fill),
+                        image: AssetImage('assets/CyderIcon.png'),
+                        fit: BoxFit.fill),
                   ),
                 )
               ],
@@ -137,7 +138,7 @@ class MyselfSection extends StatelessWidget {
                           " I avoided using FXML or any GUI libraries for no reason other " +
                           "than I started this project when I didn't know what those were" +
                           " much less Gradle. Over the years this project has evolved and" +
-                          " grown and now contains over 20,000 lines of Java. The feature" +
+                          " grown and now contains over 27,000 lines of code. The feature" +
                           " I am most proud of is it's ability to webscrape YouTube for" +
                           " the first video resulting from a user query such as \"parallel" +
                           " universe tevvez\" and from the returned HTML, find the first" +
@@ -158,24 +159,7 @@ class MyselfSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 100),
-            Center(
-              child: Expanded(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Container(
-                    width: 1079.0,
-                    height: 608.0,
-                    alignment: Alignment.center,
-                    decoration: new BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('Cyder.png'), fit: BoxFit.fill),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 100),
+            PaddedPNG(image: "assets/Console.png", width: 1079.0, height: 608.0),
             Center(
               child: Container(
                 child: Padding(
@@ -206,13 +190,15 @@ class MyselfSection extends StatelessWidget {
                     ),
                   ),
                 ]),
-            PaddedPNG(image: "Weather.png", width: 450.0, height: 600.0),
-            PaddedPNG(image: "Login.png", width: 600.0, height: 400.0),
-            PaddedPNG(image: "Prefs.png", width: 900.0, height: 700.0),
-            PaddedPNG(image: "TempConverter.png", width: 600.0, height: 340.0),
-            PaddedPNG(image: "Dir.png", width: 620.0, height: 470.0),
-            PaddedPNG(image: "Calculator.png", width: 400.0, height: 595.0),
-            PaddedPNG(image: "Notes.png", width: 600.0, height: 625.0),
+            PaddedPNG(image: "assets/Weather.png", width: 450.0, height: 600.0),
+            PaddedPNG(image: "assets/Login.png", width: 600.0, height: 400.0),
+            PaddedPNG(image: "assets/Prefs.png", width: 900.0, height: 700.0),
+            PaddedPNG(
+                image: "assets/TempConverter.png", width: 600.0, height: 340.0),
+            PaddedPNG(image: "assets/Dir.png", width: 620.0, height: 470.0),
+            PaddedPNG(
+                image: "assets/Calculator.png", width: 400.0, height: 595.0),
+            PaddedPNG(image: "assets/Notes.png", width: 600.0, height: 625.0),
           ],
         ),
       ),
@@ -225,7 +211,9 @@ class PaddedPNG extends StatelessWidget {
   final double width;
   final double height;
   const PaddedPNG({
-    required this.image, required this.width, required this.height,
+    required this.image,
+    required this.width,
+    required this.height,
   });
 
   @override
@@ -233,17 +221,15 @@ class PaddedPNG extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 50.0, bottom: 50.0),
       child: Center(
-        child: Expanded(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Container(
-              width: this.width,
-              height: this.height,
-              alignment: Alignment.center,
-              decoration: new BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(this.image), fit: BoxFit.fill),
-              ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Container(
+            width: this.width,
+            height: this.height,
+            alignment: Alignment.center,
+            decoration: new BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(this.image), fit: BoxFit.fill),
             ),
           ),
         ),

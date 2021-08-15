@@ -297,7 +297,7 @@ class ExperienceSection extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: new BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('Matlab.png'), fit: BoxFit.fill),
+                        image: AssetImage('assets/Matlab.png'), fit: BoxFit.fill),
                   ),
                 )
               ],
