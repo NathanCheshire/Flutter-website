@@ -91,6 +91,7 @@ class MyApp extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
                       "Myself",
+                      overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -103,6 +104,7 @@ class MyApp extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
                       "GitHub",
+                      overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -115,6 +117,7 @@ class MyApp extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
                       "Experience",
+                      overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -127,6 +130,7 @@ class MyApp extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
                       "Resume",
+                      overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -139,6 +143,7 @@ class MyApp extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
                       "Contact",
+                      overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
