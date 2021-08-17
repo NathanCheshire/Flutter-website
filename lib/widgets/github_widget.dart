@@ -36,35 +36,38 @@ class GitHubSection extends StatelessWidget {
     return Container(
         color: tabContainerColor,
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
           child: Center(
             child: SingleChildScrollView(
-              child: FutureBuilder(
-                  future: getRepos(),
-                  builder: (context, AsyncSnapshot snap) {
-                    if (!snap.hasData) {
-                      return Center(child: CircularProgressIndicator());
-                    } else {
-                      List<GitHubCard> cards = [];
-                    
-                      for (var i = 0; i < snap.data.length; i++) {
-                        if (snap.data[i].name != null &&
-                            snap.data[i].description != null &&
-                            snap.data[i].language != null) {
-                          cards.add(new GitHubCard(
-                              title: snap.data[i].name,
-                              description: snap.data[i].description,
-                              language: "Language: " + snap.data[i].language));
+              child: Padding (
+                padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                child: FutureBuilder(
+                    future: getRepos(),
+                    builder: (context, AsyncSnapshot snap) {
+                      if (!snap.hasData) {
+                        return Center(child: CircularProgressIndicator());
+                      } else {
+                        List<GitHubCard> cards = [];
+                      
+                        for (var i = 0; i < snap.data.length; i++) {
+                          if (snap.data[i].name != null &&
+                              snap.data[i].description != null &&
+                              snap.data[i].language != null) {
+                            cards.add(new GitHubCard(
+                                title: snap.data[i].name,
+                                description: snap.data[i].description,
+                                language: "Language: " + snap.data[i].language));
+                          }
                         }
+                        return Wrap(
+                            alignment: WrapAlignment.center,
+                            spacing: 50,
+                            runSpacing: 50.0,
+                            direction: Axis.horizontal,
+                            children: cards);
                       }
-                      return Wrap(
-                          alignment: WrapAlignment.center,
-                          spacing: 50,
-                          runSpacing: 50.0,
-                          direction: Axis.horizontal,
-                          children: cards);
-                    }
-                  }),
+                    }),
+              ),
             ),
           ),
         ));

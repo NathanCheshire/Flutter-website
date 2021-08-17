@@ -17,7 +17,7 @@ class MyselfSection extends StatelessWidget {
       color: tabContainerColor,
       child: Padding(
         padding:
-            const EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+            const EdgeInsets.only(left: 20, right: 20),
         //main list view to hold entire scroll, replace with tab view
         child: ListView(
           physics: BouncingScrollPhysics(),
