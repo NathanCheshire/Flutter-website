@@ -165,6 +165,7 @@ class ExperienceSection extends StatelessWidget {
                     width: 100,
                     height: 100,
                     child: Text("C",
+                        textAlign: TextAlign.center,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
                             fontSize: 100,
@@ -297,7 +298,8 @@ class ExperienceSection extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: new BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/Matlab.png'), fit: BoxFit.fill),
+                        image: AssetImage('assets/Matlab.png'),
+                        fit: BoxFit.fill),
                   ),
                 )
               ],
@@ -417,6 +419,7 @@ class ExperienceSection extends StatelessWidget {
                     width: 300,
                     height: 100,
                     child: Text("x86_64 and PIC24",
+                        textAlign: TextAlign.center,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
                             fontSize: 85,
@@ -438,6 +441,46 @@ class ExperienceSection extends StatelessWidget {
                         "Experience writing in raw x86_64 and PIC24 (microcontroller) assembly. Knowledge of" +
                             " the instructions sets. Knowledge on how to read assembly instruciton sets and properly write" +
                             " in assembly.",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.robotoCondensed(
+                          textStyle: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        )),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: SvgPicture.asset(
+                    "assets/Flutter.svg",
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * .75,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: Text(
+                        "Experience using Flutter to create iOS/Android apps and for web " +
+                            "development. This webapp is written using flutter and the mobile app" +
+                            " \"Swapps\" which I have worked on is written using flutter.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
