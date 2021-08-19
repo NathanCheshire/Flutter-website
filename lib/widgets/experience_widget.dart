@@ -558,7 +558,7 @@ class ExperienceSection extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
-                        "Experience using Node and npm for it's intended purpose (a package manager) for purposes such as client/server programming.",
+                        "Experience using Node and npm for their respectiv purposes such as client/server programming for native/web apps.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
