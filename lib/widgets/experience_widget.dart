@@ -620,7 +620,7 @@ class ExperienceSection extends StatelessWidget {
               children: [
                 Center(
                   child: SvgPicture.asset(
-                    "assets/CSS.svg",
+                    "assets/Css.svg",
                     width: 100,
                     height: 100,
                   ),
@@ -636,10 +636,10 @@ class ExperienceSection extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
-                        "Experience using CSS to decorate HTML and style elements." + 
-                        " Experience making animations and complex designs using CSS." + 
-                        " Experience using CSS in all three possible ways: internal," + 
-                        " external, and inline.",
+                        "Experience using CSS to decorate HTML and style elements." +
+                            " Experience making animations and complex designs using CSS." +
+                            " Experience using CSS in all three possible ways: internal," +
+                            " external, and inline.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
