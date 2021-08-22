@@ -493,7 +493,7 @@ class ExperienceSection extends StatelessWidget {
                 )
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 80,
             ),
             Row(
@@ -518,9 +518,9 @@ class ExperienceSection extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
-                        "Experience using React for basic component/web development." + 
-                        "Currently I am working on recreating this very website using" + 
-                        " the React framework and will link to it when it is completed.",
+                        "Experience using React for basic component/web development." +
+                            "Currently I am working on recreating this very website using" +
+                            " the React framework and will link to it when it is completed.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
@@ -533,7 +533,7 @@ class ExperienceSection extends StatelessWidget {
                 )
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 80,
             ),
             Row(
@@ -559,6 +559,87 @@ class ExperienceSection extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
                         "Experience using Node and npm for their respective purposes such as client/server programming for native/web apps.",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.robotoCondensed(
+                          textStyle: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        )),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: SvgPicture.asset(
+                    "assets/Html.svg",
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * .75,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: Text(
+                        "Experience using HTML(5) for general purpose front-end" +
+                            " development. Understanding of language and how to write" +
+                            " properly for integration with CSS.",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.robotoCondensed(
+                          textStyle: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        )),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: SvgPicture.asset(
+                    "assets/CSS.svg",
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * .75,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: Text(
+                        "Experience using CSS to decorate HTML and style elements." + 
+                        " Experience making animations and complex designs using CSS." + 
+                        " Experience using CSS in all three possible ways: internal," + 
+                        " external, and inline.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
