@@ -601,7 +601,8 @@ class ExperienceSection extends StatelessWidget {
                     child: Text(
                         "Experience using React for basic component/web development." +
                             "Currently I am working on recreating this very website using" +
-                            " the React framework and will link to it when it is completed.",
+                            " the React framework and will link to it when it is completed." + 
+                            "Additionally, I am teaching myself React using YouTube videos, blobs, and documentation.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
@@ -639,7 +640,9 @@ class ExperienceSection extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
-                        "Experience using Node and npm for their respective purposes such as client/server programming for native/web apps.",
+                        "Experience using Node and npm for their respective purposes" + 
+                        " such as client/server programming for native/web apps." + 
+                        " I am currently in the process of learning more NodeJS",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
