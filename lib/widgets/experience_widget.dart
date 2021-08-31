@@ -642,7 +642,7 @@ class ExperienceSection extends StatelessWidget {
                     child: Text(
                         "Experience using Node and npm for their respective purposes" + 
                         " such as client/server programming for native/web apps." + 
-                        " I am currently in the process of learning more NodeJS",
+                        " I am currently in the process of learning more NodeJS.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
