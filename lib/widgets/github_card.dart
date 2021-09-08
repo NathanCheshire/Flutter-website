@@ -25,9 +25,8 @@ class GitHubCard extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF2A5470),
-              Color(0xFF4C4177),
-              //Color(0xFFffaf7b)
+              Color.fromRGBO(205, 119, 130, 1),
+              Color.fromRGBO(89, 85, 161, 1),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -53,7 +52,6 @@ class GitHubCard extends StatelessWidget {
               height: 10,
             ), //spac
             Flexible(
-
               child: SingleChildScrollView(
                 child: Container(
                   width: cardWidth,
@@ -68,7 +66,7 @@ class GitHubCard extends StatelessWidget {
                             fontSize: 18,
                             fontWeight: FontWeight.w300,
                             fontFamily: "Roboto",
-                            color: Colors.white70,
+                            color: Colors.white,
                           ),
                         ),
                       ],

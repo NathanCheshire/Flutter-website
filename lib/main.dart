@@ -12,10 +12,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const Color tabContainerColor = Color.fromRGBO(29, 34, 55, 1);
+    const Color tabContainerColor = Color.fromRGBO(34, 34, 34, 1);
 
     return MaterialApp(
       title: 'NathanCheshire',
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
                 toolbarHeight: 120,
-                backgroundColor: Color.fromRGBO(37, 44, 72, 1),
+                backgroundColor: Color.fromRGBO(22, 22, 22, 1),
                 foregroundColor: Colors.white,
                 title: Row(
                   children: [
@@ -54,8 +53,8 @@ class MyApp extends StatelessWidget {
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   colors: [
-                                    Color.fromRGBO(37, 44, 72, 1),
-                                    Color.fromRGBO(37, 44, 72, 1)
+                                    Color.fromRGBO(22, 22, 22, 1),
+                                    Color.fromRGBO(22, 22, 22, 1)
                                   ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
@@ -75,15 +74,6 @@ class MyApp extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // Padding(
-                    //   padding: const EdgeInsets.all(10.0),
-                    //   child: Column(
-                    //     children: [
-                    //       Line(color: Color(0xffF8B7CD)),
-                    //       Line(color: Color(0xff0671B7)),
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
                 bottom: const TabBar(indicatorColor: Colors.white, tabs: [

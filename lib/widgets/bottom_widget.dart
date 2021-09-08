@@ -27,7 +27,7 @@ class BottomWidget extends StatelessWidget {
     return Container(
       height: 100,
       width: MediaQuery.of(context).size.width,
-      color: Color.fromRGBO(37, 44, 72, 1),
+      color: Color.fromRGBO(22, 22, 22, 1),
       child: Padding(
         padding: const EdgeInsets.only(
           left: 50,
