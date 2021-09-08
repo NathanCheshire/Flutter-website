@@ -28,19 +28,19 @@ class ContactSection extends StatelessWidget {
                 icon: "assets/Gmail.svg",
                 text:
                     "Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
-                url: "TODO",
+                url: "mailto:Nate@NathanCheshire.com",
                 excessIconPadding: 20,
               ),
               buildClickableContact(
                 icon: "assets/Github.svg",
                 text: "GitHub.com/NathanCheshire",
-                url: "TODO",
+                url: "GitHub.com/NathanCheshire",
                 excessIconPadding: 0,
               ),
               buildClickableContact(
                 icon: "assets/Discord.svg",
                 text: "Natche#8845",
-                url: "TODO",
+                url: "https://discord.com/app",
                 excessIconPadding: 0,
               )
             ],
@@ -75,45 +75,48 @@ class buildClickableContact extends StatelessWidget {
     }
   }
 
+  //todo make these pretty cards that are spaced un evenenly
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Wrap(
-        alignment: WrapAlignment.center,
-        children: [
-          GestureDetector(
-              onTap: (() {
-                if (url.length > 4) {
-                  _launchInBrowser(url);
-                }
-              }),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: excessIconPadding),
-                    child: SvgPicture.asset(
-                      icon,
-                      width: 75,
-                      height: 75,
+    return GestureDetector(
+      onTap: (() {
+        if (url.length > 4) {
+          _launchInBrowser(url);
+        }
+      }),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(top: excessIconPadding),
+                  child: SvgPicture.asset(
+                    icon,
+                    width: 75,
+                    height: 75,
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, top: 30.0),
+              child: Text(text,
+                  textAlign: TextAlign.left,
+                  style: GoogleFonts.robotoCondensed(
+                    textStyle: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
-                  ),
-                ],
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, top: 30.0),
-            child: Text(text,
-                textAlign: TextAlign.left,
-                style: GoogleFonts.robotoCondensed(
-                  textStyle: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                )),
-          ),
-        ],
+                  )),
+            ),
+          ],
+        ),
       ),
     );
   }
