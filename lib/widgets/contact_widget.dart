@@ -12,19 +12,6 @@ class ContactSection extends StatelessWidget {
 
   final Color tabContainerColor;
 
-  Future<void> _launchInBrowser(String url) async {
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        forceSafariVC: false,
-        forceWebView: false,
-        headers: <String, String>{'my_header_key': 'my_header_value'},
-      );
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,105 +24,97 @@ class ContactSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: (() {
-                        _launchInBrowser("");
-                      }),
-                      child: SvgPicture.asset(
-                        "assets/Gmail.svg",
-                        width: 75,
-                        height: 75,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20.0, top: 10.0),
-                      child: Text(
-                          "Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.robotoCondensed(
-                            textStyle: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          )),
-                    ),
-                  ],
-                ),
+              buildClickableContact(
+                icon: "assets/Gmail.svg",
+                text:
+                    "Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
+                url: "TODO",
+                excessIconPadding: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: (() {
-                        _launchInBrowser("");
-                      }),
-                      child: SvgPicture.asset(
-                        "assets/Github.svg",
-                        width: 75,
-                        height: 75,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20.0, top: 30.0),
-                      child: Text("GitHub.com/NathanCheshire",
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.robotoCondensed(
-                            textStyle: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          )),
-                    ),
-                  ],
-                ),
+              buildClickableContact(
+                icon: "assets/Github.svg",
+                text: "GitHub.com/NathanCheshire",
+                url: "TODO",
+                excessIconPadding: 0,
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  children: [
-                    GestureDetector(
-                        onTap: (() {
-                          _launchInBrowser("");
-                        }),
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              "assets/Discord.svg",
-                              width: 75,
-                              height: 75,
-                            ),
-                          ],
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20.0, top: 30.0),
-                      child: Text("Natche#8845",
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.robotoCondensed(
-                            textStyle: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          )),
-                    ),
-                  ],
-                ),
-              ),
+              buildClickableContact(
+                icon: "assets/Discord.svg",
+                text: "Natche#8845",
+                url: "TODO",
+                excessIconPadding: 0,
+              )
             ],
           ),
         ),
       )),
+    );
+  }
+}
+
+// ignore: camel_case_types
+class buildClickableContact extends StatelessWidget {
+  final String icon;
+  final String text;
+  final String url;
+  final double excessIconPadding;
+
+  const buildClickableContact(
+      {required this.icon,
+      required this.text,
+      required this.url,
+      required this.excessIconPadding});
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        children: [
+          GestureDetector(
+              onTap: (() {
+                if (url.length > 4) {
+                  _launchInBrowser(url);
+                }
+              }),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: excessIconPadding),
+                    child: SvgPicture.asset(
+                      icon,
+                      width: 75,
+                      height: 75,
+                    ),
+                  ),
+                ],
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, top: 30.0),
+            child: Text(text,
+                textAlign: TextAlign.left,
+                style: GoogleFonts.robotoCondensed(
+                  textStyle: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                )),
+          ),
+        ],
+      ),
     );
   }
 }
