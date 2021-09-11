@@ -16,31 +16,36 @@ class MyselfSection extends StatelessWidget {
     return Container(
       color: tabContainerColor,
       child: Padding(
-        padding:
-            const EdgeInsets.only(left: 20, right: 20),
+        padding: const EdgeInsets.only(left: 20, right: 20),
         //main list view to hold entire scroll, replace with tab view
         child: ListView(
           physics: BouncingScrollPhysics(),
           children: [
-            Wrap(
-              direction: Axis.horizontal,
-              alignment: WrapAlignment.center,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  "assets/BlackBelt.svg",
-                  width: 150,
-                  height: 150,
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.75,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 50, bottom: 50),
+                  child: Text("Nathan Cheshire",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.seaweedScript(
+                        textStyle: TextStyle(
+                          fontSize: 60,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )),
                 ),
-                SizedBox(
-                  width: 50,
-                ),
-                SvgPicture.asset(
-                  "assets/Dumbell.svg",
-                  width: 150,
-                  height: 150,
-                ),
-              ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 0, bottom: 10, left: 0, right: 0),
+              child: Container(
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width - 80,
+                height: 3,
+                color: Colors.white,
+              ),
             ),
             Center(
               child: Container(
@@ -159,7 +164,8 @@ class MyselfSection extends StatelessWidget {
                 ),
               ),
             ),
-            PaddedPNG(image: "assets/Console.png", width: 1079.0, height: 608.0),
+            PaddedPNG(
+                image: "assets/Console.png", width: 1079.0, height: 608.0),
             Center(
               child: Container(
                 child: Padding(
