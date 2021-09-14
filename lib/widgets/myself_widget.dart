@@ -38,6 +38,13 @@ class MyselfSection extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+           
+            SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: EdgeInsets.only(top: 0, bottom: 10, left: 0, right: 0),
               child: Container(
@@ -59,8 +66,8 @@ class MyselfSection extends StatelessWidget {
                           "fitness, programming, and hiking in my free time. I am very" +
                           " proud of two awards in particular which I have achieved. " +
                           "Those awards are: the highest rank a Boy Scout can earn," +
-                          " that of Eagle Scout, and second degree black belt in Taekwondo." +
-                          " I'm also an INFJ-A Meyers-Briggs type and a type one enneagram.",
+                          " that of Eagle Scout, and second degree Black Belt in Taekwondo." +
+                          " Additionally, I'm an INFJ-A Meyers-Briggs type and a type one enneagram.",
                       style: GoogleFonts.robotoCondensed(
                         textStyle: TextStyle(
                           fontSize: 28,
