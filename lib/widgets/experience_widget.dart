@@ -91,7 +91,7 @@ class ExperienceSection extends StatelessWidget {
                         "Over five years of experience using Java for work, " +
                             "personal projects, and general scripting. This is the " +
                             "first language I learned back in 2017 when I took AP computer" +
-                            " science in highschool. Thus, it should be no suprise that" +
+                            " science in high school. Thus, it should be no suprise that" +
                             " Java is my favorite language as it will forever hold a" +
                             " special place in my heart as the language that made me" +
                             " choose software engineering as a major.",
@@ -136,8 +136,7 @@ class ExperienceSection extends StatelessWidget {
                             " homework for the following classes: Data Structures," +
                             " Algorithms, Microprocessors (translating C++ to PIC24 Assembly)" +
                             ", Discrete Systems, and Software Testing and QA. " +
-                            "Some of the assignments I have used C++ for include but" +
-                            " are not limited to: a Binary Search Tree, an Adelson Velsky" +
+                            "Some of the assignments I have used C++ for include a Binary Search Tree, an Adelson Velsky" +
                             " Landis Tree, and an AVL post order traversal saver/loader." +
                             " See the GitHub tab or my GitHub page for more information.",
                         textAlign: TextAlign.left,
@@ -189,10 +188,10 @@ class ExperienceSection extends StatelessWidget {
                             " using C for general purpose programming." +
                             " With this comes an accompanying knowledge" +
                             " of the topic of operating systems. I hope one day to" +
-                            " attempt to write a simple one from scratch and" +
+                            " attempt to write a simple OS from scratch and" +
                             " implement simple features such as a paging and a" +
                             " Native GUI Library to test my knowlege. A few of the projects" +
-                            " I've used C for include: testing timings on a custom made" +
+                            " I've used C for purposes includeing testing timings on a custom made" +
                             " thread-safe linked list versus a non-locking linked list," +
                             " timing Linux system calls such as fork, using pipes, and" +
                             " timing functions such as qsort.",
@@ -269,7 +268,7 @@ class ExperienceSection extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
                         "Experience using Python to complete general side projects." +
-                            " I use this language if I need to script up a simple tool quickly. " +
+                            " I use this language primarily for general fast scripting purposes. " +
                             "Light experience using Tensorflow/Keras and other libraries to complete a facial" +
                             " recognition project. " +
                             "I am extemely comforable using Python to complete any project.",
@@ -560,8 +559,8 @@ class ExperienceSection extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
                         "Experience using Flutter to create iOS/Android apps and for web " +
-                            "development. This webapp is written using flutter and the mobile app" +
-                            " \"Swapps\" which I have worked on is written using flutter.",
+                            "development. This webapp, infact, is written using Flutter as well as my senior design app project" +
+                            " Swapps.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
@@ -602,7 +601,7 @@ class ExperienceSection extends StatelessWidget {
                         "Experience using React for basic component/web development." +
                             "Currently I am working on recreating this very website using" +
                             " the React framework and will link to it when it is completed." + 
-                            "Additionally, I am teaching myself React using YouTube videos, blobs, and documentation.",
+                            " Additionally, I am teaching myself React using YouTube videos, blogs, and documentation.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
@@ -641,8 +640,8 @@ class ExperienceSection extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
                         "Experience using Node and npm for their respective purposes" + 
-                        " such as client/server programming for native/web apps." + 
-                        " I am currently in the process of learning more NodeJS.",
+                        " such as client/server programming for web apps." + 
+                        " I am currently in the process of teacing myself NodeJS.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(

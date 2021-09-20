@@ -41,7 +41,6 @@ class MyselfSection extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-           
             SizedBox(
               height: 20,
             ),
@@ -65,7 +64,7 @@ class MyselfSection extends StatelessWidget {
                           "engineering and mathematics. I enjoy body building and " +
                           "fitness, programming, and hiking in my free time. I am very" +
                           " proud of two awards in particular which I have achieved. " +
-                          "Those awards are: the highest rank a Boy Scout can earn," +
+                          "Those awards are the highest rank a Boy Scout can earn," +
                           " that of Eagle Scout, and second degree Black Belt in Taekwondo." +
                           " Additionally, I'm an INFJ-A Meyers-Briggs type and a type one enneagram.",
                       style: GoogleFonts.robotoCondensed(
@@ -108,7 +107,7 @@ class MyselfSection extends StatelessWidget {
                           " The first being the power of Flutter. Not only is it a UI framework" +
                           " for the web, iOS, Android, and desktop, but it is also a combination" +
                           " of an extremely high performance graphics engine and the language Dart" +
-                          " which compiles to native machine ARM64 or x86/64 code meaning faster rendering",
+                          " which compiles to native machine ARM64 or x86/64 code meaning faster rendering.",
                       textAlign: TextAlign.left,
                       style: GoogleFonts.robotoCondensed(
                         textStyle: TextStyle(
@@ -151,9 +150,9 @@ class MyselfSection extends StatelessWidget {
                           "than I started this project when I didn't know what those were" +
                           " much less Gradle. Over the years this project has evolved and" +
                           " grown and now contains over 27,000 lines of code. The feature" +
-                          " I am most proud of is it's ability to webscrape YouTube for" +
-                          " the first video resulting from a user query such as \"parallel" +
-                          " universe tevvez\" and from the returned HTML, find the first" +
+                          " I am most proud of is its ability to webscrape YouTube for" +
+                          " the first video resulting from a user query. Then, from the returned HTML," +
+                          " Cyder locates the first" +
                           " UUID. The program then constructs the videoID and gives it to " +
                           "FFMPEG/YouTube-DL. This then converts and downloads the YouTube" +
                           " video and saves it as an mp4. FFMPEG then extracts the audio" +

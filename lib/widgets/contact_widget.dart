@@ -27,7 +27,7 @@ class ContactSection extends StatelessWidget {
               buildClickableContact(
                 icon: "assets/Gmail.svg",
                 text:
-                    "Personal: Nathan.Vincent.2.718@gmail.com\nBusiness: Nate@NathanCheshire.com",
+                    "Nate@NathanCheshire.com",
                 url: "mailto:Nate@NathanCheshire.com",
                 excessIconPadding: 20,
                 color1: Color(0xFF5478FF),
