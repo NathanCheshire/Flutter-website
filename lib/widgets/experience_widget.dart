@@ -231,7 +231,9 @@ class ExperienceSection extends StatelessWidget {
                         "Experience using relational databases such as Postgres " +
                             "and MySQL to perform standard CRUD (Create, Read, Update, Delete) " +
                             "operations. Experience writing querries, creating databases, and " +
-                            "using databases with languages such as Python and Java.",
+                            "using databases with languages such as Python and Java. Experience" + 
+                            " at taking a database diagram, normalizing it, and creating the" + 
+                            " database and relations.",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.robotoCondensed(
                           textStyle: TextStyle(
