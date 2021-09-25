@@ -70,7 +70,7 @@ class ResumeSection extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 40),
                           child: OutlinedButton(
                             onPressed: () {
-                              _launchInBrowser("https://drive.google.com/file/d/1CWJ7wIMhRE8-GubCvvIMExb0wJ0M-Gdk/view?usp=sharing");
+                              _launchInBrowser("https://docs.google.com/document/d/1m03d0rrNp1dg70ERiEOsSB_jCzSTiYuV/edit?usp=sharing&ouid=106036439461732713867&rtpof=true&sd=true");
                             },
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
