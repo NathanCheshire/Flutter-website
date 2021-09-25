@@ -29,7 +29,7 @@ class ContactSection extends StatelessWidget {
                 text:
                     "Nate@NathanCheshire.com",
                 url: "mailto:Nate@NathanCheshire.com",
-                excessIconPadding: 20,
+                excessIconPadding: 10,
                 color1: Color(0xFF5478FF),
                 color2: Color(0xFF8BC8FF),
               ),
