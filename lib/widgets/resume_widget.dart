@@ -47,8 +47,8 @@ class ResumeSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15.0),
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           child: Container(
-                            width: 742.0 / 2,
-                            height: 1052.0 / 2,
+                            width: 371,
+                            height: 526,
                             alignment: Alignment.center,
                             decoration: new BoxDecoration(
                               image: DecorationImage(
