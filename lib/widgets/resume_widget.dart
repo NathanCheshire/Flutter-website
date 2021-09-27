@@ -11,8 +11,8 @@ class ResumeSection extends StatelessWidget {
   }) : super(key: key);
 
   final Color tabContainerColor;
-  final double resumeWidth = 897.0;
-  final double resumeHeight = 1162.0;
+  final double resumeWidth = 743.0;
+  final double resumeHeight = 1052.0;
 
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
