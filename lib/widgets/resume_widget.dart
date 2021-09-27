@@ -11,8 +11,6 @@ class ResumeSection extends StatelessWidget {
   }) : super(key: key);
 
   final Color tabContainerColor;
-  final double resumeWidth = 743.0;
-  final double resumeHeight = 1052.0;
 
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
@@ -49,8 +47,8 @@ class ResumeSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15.0),
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           child: Container(
-                            width: resumeWidth / 2,
-                            height: resumeHeight / 2,
+                            width: 742.0 / 2,
+                            height: 1052.0 / 2,
                             alignment: Alignment.center,
                             decoration: new BoxDecoration(
                               image: DecorationImage(
@@ -70,7 +68,7 @@ class ResumeSection extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 40),
                           child: OutlinedButton(
                             onPressed: () {
-                              _launchInBrowser("https://drive.google.com/file/d/1taIQtAF9YqsVOj7x8Q_wnWd7uJOVsSc1/view?usp=sharing");
+                              _launchInBrowser("https://drive.google.com/drive/folders/1VmZVYama4IkFXuwj--2Ju-5g_RmxlMD7?usp=sharing");
                             },
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
