@@ -17,6 +17,17 @@ class GitHubCard extends StatelessWidget {
     double cardWidth = 256;
     double cardHeight = 320;
 
+    var specialTitles = ["Cyder", "Flutter-website", "Punch",
+     "AVL-Loader", "FacialRecognition", "StraightShot"];
+
+    bool special = specialTitles.contains(this.title);
+    var colors = [Color.fromRGBO(18, 18, 18, 1), Color.fromRGBO(18, 18, 18, 1)];
+    var specialColors = [
+      Color.fromRGBO(131, 148, 240, 1),
+      Color.fromRGBO(131, 148, 240, 1),
+      Color.fromRGBO(162, 149, 229, 1)
+    ];
+
     return Container(
       child: Container(
         height: cardWidth,
@@ -24,10 +35,7 @@ class GitHubCard extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Color.fromRGBO(205, 119, 130, 1),
-              Color.fromRGBO(89, 85, 161, 1),
-            ],
+            colors: special ? specialColors : colors,
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -37,39 +45,52 @@ class GitHubCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Container(
-              child: Text(
-                this.title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-                overflow: TextOverflow.fade,
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    child: Text(
+                      this.title.length > 24
+                          ? this.title.substring(0, 24) + "..."
+                          : this.title,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      overflow: TextOverflow.fade,
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(
               height: 10,
             ), //spac
-            Flexible(
-              child: SingleChildScrollView(
-                child: Container(
-                  width: cardWidth,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 10),
-                    child: Column(
-                      children: [
-                        Text(
-                          this.description,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w300,
-                            fontFamily: "Roboto",
-                            color: Colors.white,
+            Flexible( //todo this still isn't centered
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Container(
+                    width: cardWidth,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 10, bottom: 10),
+                      child: Column(
+                        children: [
+                          Text(
+                            this.description,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w300,
+                              fontFamily: "Roboto",
+                              color: Colors.white,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -79,8 +100,8 @@ class GitHubCard extends StatelessWidget {
               height: 10,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   this.language,

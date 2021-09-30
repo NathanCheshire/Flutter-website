@@ -10,6 +10,12 @@ class MyselfSection extends StatelessWidget {
   }) : super(key: key);
 
   final Color tabContainerColor;
+  //console notification gif
+  //show weather widget changing locations gif, pathfinding gif
+  //loggin in gif
+  //music gif
+  //webscapring youtube gif
+  //keep temp converter and edit user at bottom
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +34,7 @@ class MyselfSection extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 50, bottom: 50),
                   child: Text("Nathan Cheshire",
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.seaweedScript(
+                      style: GoogleFonts.pressStart2p(
                         textStyle: TextStyle(
                           fontSize: 60,
                           fontWeight: FontWeight.bold,
@@ -40,6 +46,23 @@ class MyselfSection extends StatelessWidget {
             ),
             SizedBox(
               height: 20,
+            ),
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.75,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 50, bottom: 50),
+                  child: Text("AKA: Natche, Cypher",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.pressStart2p(
+                        textStyle: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )),
+                ),
+              ),
             ),
             SizedBox(
               height: 20,
@@ -90,8 +113,9 @@ class MyselfSection extends StatelessWidget {
                   width: 150,
                   height: 150,
                 ),
+                SizedBox(width: 40),
                 SvgPicture.asset(
-                  "assets/Dart.svg",
+                  "assets/FireBase.svg",
                   width: 150,
                   height: 150,
                 ),

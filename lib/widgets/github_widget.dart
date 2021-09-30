@@ -40,7 +40,7 @@ class GitHubSection extends StatelessWidget {
           child: Center(
             child: SingleChildScrollView(
               child: Padding (
-                padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                padding: const EdgeInsets.only(top: 20.0, bottom: 20.0, left: 20.0, right: 20.0),
                 child: FutureBuilder(
                     future: getRepos(),
                     builder: (context, AsyncSnapshot snap) {
