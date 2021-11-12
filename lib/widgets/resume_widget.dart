@@ -94,7 +94,7 @@ class ResumeSection extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SvgPicture.asset("google-drive.svg",
+                      SvgPicture.asset("assets/google-drive.svg",
                           width: 150, height: 150)
                     ],
                   ),
