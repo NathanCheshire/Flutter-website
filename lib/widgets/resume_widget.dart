@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ResumeSection extends StatelessWidget {
@@ -47,12 +48,12 @@ class ResumeSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15.0),
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           child: Container(
-                            width: 371,
-                            height: 526,
+                            width: 600,
+                            height: 850,
                             alignment: Alignment.center,
                             decoration: new BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('assets/ResumeBlur.png'),
+                                  image: AssetImage('assets/resume.png'),
                                   fit: BoxFit.fill),
                             ),
                           ),
@@ -68,12 +69,13 @@ class ResumeSection extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 40),
                           child: OutlinedButton(
                             onPressed: () {
-                              _launchInBrowser("https://drive.google.com/drive/folders/1VmZVYama4IkFXuwj--2Ju-5g_RmxlMD7?usp=sharing");
+                              _launchInBrowser(
+                                  "https://drive.google.com/drive/folders/1VmZVYama4IkFXuwj--2Ju-5g_RmxlMD7?usp=sharing");
                             },
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Text(
-                                'Click here to view my official resume',
+                                'Official Resume Drive',
                                 style: TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.w500,
@@ -82,11 +84,21 @@ class ResumeSection extends StatelessWidget {
                               ),
                             ),
                             style: OutlinedButton.styleFrom(
-                                side:
-                                    BorderSide(width: 3.0, color: Colors.white)),
+                                side: BorderSide(
+                                    width: 3.0, color: Colors.white)),
                           ),
                         )
                       ]),
+                  SizedBox(height: 40),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset("google-drive.svg",
+                          width: 150, height: 150)
+                    ],
+                  ),
+                  SizedBox(height: 40)
                 ],
               ),
             ),
