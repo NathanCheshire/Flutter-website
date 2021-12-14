@@ -576,6 +576,44 @@ class ExperienceSection extends StatelessWidget {
           SizedBox(
             height: 80,
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: SvgPicture.asset(
+                  "assets/Selenium.svg",
+                  width: 100,
+                  height: 100,
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width * .75,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Text(
+                      ('''Experience using Selenium for web automation, field injection, 2FA bypassing, cookie IO, webcrawling, and many more specific Selenium usages.'''),
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.robotoCondensed(
+                        textStyle: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )),
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 80,
+          ),
         ]),
       )),
     );
