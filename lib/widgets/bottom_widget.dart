@@ -35,7 +35,7 @@ class BottomWidget extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Wrap(
               alignment: WrapAlignment.center,
               direction: Axis.horizontal,
@@ -76,8 +76,7 @@ class BottomWidget extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 20.0),
                           child: Text(
-                              "Questions, comments, or concerns? Contact me by" +
-                                  " checking out the contact section in the navigation bar",
+                              "Want to get in contact with me? Checkout the Contact section",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.ubuntu(
                                 textStyle: TextStyle(

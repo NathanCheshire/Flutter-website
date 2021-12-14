@@ -19,32 +19,6 @@ class MyselfSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cyderDescription = "Widget explanation from top left to bottom right:\n" +
-        "The preferences editor allows a user to change " +
-        "properties such as their username, password, preferences, " +
-        "weather/ip data keys, console clock format, add/remove " +
-        "backgrounds and music, and so much more! The notes " +
-        "editor allows a user to add/delete notes which are saved in " +
-        "text format. The program will detect unsaved changes and " +
-        "make sure the user intends to exit without saving any changes " +
-        "if unsaved changes exist. " +
-        "The pathfinding visualizer is perhaps one of my favorite widgets. " +
-        "Currently it only shows A* with manhattan and euclidean distance " +
-        "heuristics as an option. Soon dijkstras, bfs, and dfs will be added. " +
-        "Starting on the bottom row is the console. This is where " +
-        "all commands are issued and widgets are started. The console " +
-        "also keeps track of all other frames via its own taskbar " +
-        "as seen on the left. The weather widget shows weather " +
-        "data for the detected location. A user may choose " +
-        "to spawn multiple weather widgets, however, and also " +
-        "change the locations of each. The calculator widget " +
-        "has simple input buttons but also supports manual text " +
-        "entry for trig functions, pi, e, and so forth. " +
-        "The audio widget allows for any mp3 to be played, scrubbed through, " +
-        "queued in succession, looped, etc. Lastly, the temperature widget " +
-        "allow for any of the main three temperature units to be converted " +
-        "into another form.";
-
     return Container(
       color: tabContainerColor,
       child: Padding(
@@ -238,23 +212,6 @@ class MyselfSection extends StatelessWidget {
                 image: "assets/CyderDesktop.png",
                 width: 2560.0,
                 height: 1440.0),
-            SizedBox(height: 25),
-            Center(
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.75,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: Text(cyderDescription,
-                      style: GoogleFonts.robotoCondensed(
-                        textStyle: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      )),
-                ),
-              ),
-            ),
             SizedBox(height: 50),
           ],
         ),

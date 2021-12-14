@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
 import 'package:flutter_website/widgets/contact_widget.dart';
 import 'package:flutter_website/widgets/experience_widget.dart';
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
                 backgroundColor: Color.fromRGBO(22, 22, 22, 1),
                 foregroundColor: Colors.white,
                 title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
                       padding: EdgeInsets.only(top: 20, left: 20, bottom: 20),
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
                         children: [
                           Container(
                               height: 50,
-                              width: 220,
+                              width: 245,
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   colors: [Colors.white, Colors.white],
@@ -49,7 +52,7 @@ class MyApp extends StatelessWidget {
                               )),
                           Container(
                               height: 45,
-                              width: 215,
+                              width: 240,
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   colors: [
@@ -62,18 +65,79 @@ class MyApp extends StatelessWidget {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(14)),
                               )),
-                          Text(
-                            "NathanCheshire.com",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "Roboto",
-                              color: Colors.white,
-                            ),
-                          )
+                          RichText(
+                              text: TextSpan(
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Colors.white,
+                                  ),
+                                  children: [
+                                TextSpan(
+                                  text: "Nat",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Color(0xFF8879F7),
+                                  ),
+                                ),
+                                 TextSpan(
+                                  text: "han",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: "Che",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Color(0xFF8879F7),
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: "shire",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Roboto",
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                TextSpan(text: ".com"),
+                              ]))
                         ],
                       ),
                     ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(top: 20, left: 20, bottom: 20),
+                      child: GestureDetector(
+                        onTap: (() {
+                          _launchInBrowser(
+                              "http://www.github.com/NathanCheshire");
+                        }),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Center(
+                              child: SvgPicture.asset(
+                                "assets/GitHubheader.svg",
+                                width: 60,
+                                height: 60,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
                 bottom: const TabBar(indicatorColor: Colors.white, tabs: [
@@ -155,6 +219,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
     );
   }
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    }
+  }
 }
 
 class Line extends StatelessWidget {
@@ -170,31 +245,4 @@ class Line extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 300,
     );
   }
-}
-
-class SineWave extends CustomClipper<Path> {
-  @override
-  getClip(Size size) {
-    var path = new Path();
-
-    path.lineTo(0, size.height / 4.25);
-    var firstControlPoint = new Offset(size.width / 4, size.height / 3);
-    var firstEndPoint = new Offset(size.width / 2, size.height / 3 - 60);
-    var secondControlPoint =
-        new Offset(size.width - (size.width / 4), size.height / 4 - 65);
-    var secondEndPoint = new Offset(size.width, size.height / 3 - 40);
-
-    path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-        firstEndPoint.dx, firstEndPoint.dy);
-    path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-        secondEndPoint.dx, secondEndPoint.dy);
-
-    path.lineTo(size.width, size.height / 3);
-    path.lineTo(size.width, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper oldClipper) => true;
 }
