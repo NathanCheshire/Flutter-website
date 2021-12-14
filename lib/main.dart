@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        createLogo(),
+                        
                         GestureDetector(
                           onTap: (() {
                             _launchInBrowser(
