@@ -30,25 +30,23 @@ class MyApp extends StatelessWidget {
                 toolbarHeight: 120,
                 backgroundColor: Color.fromRGBO(22, 22, 22, 1),
                 foregroundColor: Colors.white,
-                title: Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      createLogo(),
-                      GestureDetector(
-                        onTap: (() {
-                          _launchInBrowser(
-                              "http://www.github.com/NathanCheshire");
-                        }),
-                        child: SvgPicture.asset(
-                          "assets/GitHubheader.svg",
-                          width: 60,
-                          height: 60,
-                        ),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    createLogo(),
+                    GestureDetector(
+                      onTap: (() {
+                        _launchInBrowser(
+                            "http://www.github.com/NathanCheshire");
+                      }),
+                      child: SvgPicture.asset(
+                        "assets/GitHubheader.svg",
+                        width: 60,
+                        height: 60,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 bottom: const TabBar(indicatorColor: Colors.white, tabs: [
                   Padding(
