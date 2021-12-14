@@ -30,115 +30,27 @@ class MyApp extends StatelessWidget {
                 toolbarHeight: 120,
                 backgroundColor: Color.fromRGBO(22, 22, 22, 1),
                 foregroundColor: Colors.white,
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 20, left: 20, bottom: 20),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                              height: 50,
-                              width: 245,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [Colors.white, Colors.white],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(14)),
-                              )),
-                          Container(
-                              height: 45,
-                              width: 240,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color.fromRGBO(22, 22, 22, 1),
-                                    Color.fromRGBO(22, 22, 22, 1)
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(14)),
-                              )),
-                          RichText(
-                              text: TextSpan(
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
-                                    color: Colors.white,
-                                  ),
-                                  children: [
-                                TextSpan(
-                                  text: "Nat",
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
-                                    color: Color(0xFF8879F7),
-                                  ),
-                                ),
-                                 TextSpan(
-                                  text: "han",
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: "Che",
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
-                                    color: Color(0xFF8879F7),
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: "shire",
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Roboto",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                TextSpan(text: ".com"),
-                              ]))
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(top: 20, left: 20, bottom: 20),
-                      child: GestureDetector(
-                        onTap: (() {
-                          _launchInBrowser(
-                              "http://www.github.com/NathanCheshire");
-                        }),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: SvgPicture.asset(
-                                "assets/GitHubheader.svg",
-                                width: 60,
-                                height: 60,
-                              ),
-                            ),
-                          ],
+                title: SingleChildScrollView(
+                  child: Flexible(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        createLogo(),
+                        GestureDetector(
+                          onTap: (() {
+                            _launchInBrowser(
+                                "http://www.github.com/NathanCheshire");
+                          }),
+                          child: SvgPicture.asset(
+                            "assets/GitHubheader.svg",
+                            width: 60,
+                            height: 60,
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                      ],
+                    ),
+                  ),
                 ),
                 bottom: const TabBar(indicatorColor: Colors.white, tabs: [
                   Padding(
@@ -245,4 +157,84 @@ class Line extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 300,
     );
   }
+}
+
+Widget createLogo() {
+  return Stack(
+    alignment: Alignment.center,
+    children: [
+      Container(
+          height: 50,
+          width: 245,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.white, Colors.white],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(14)),
+          )),
+      Container(
+          height: 45,
+          width: 240,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromRGBO(22, 22, 22, 1),
+                Color.fromRGBO(22, 22, 22, 1)
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(14)),
+          )),
+      RichText(
+          text: TextSpan(
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Roboto",
+                color: Colors.white,
+              ),
+              children: [
+            TextSpan(
+              text: "Nat",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Roboto",
+                color: Color(0xFF8879F7),
+              ),
+            ),
+            TextSpan(
+              text: "han",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Roboto",
+                color: Colors.white,
+              ),
+            ),
+            TextSpan(
+              text: "Che",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Roboto",
+                color: Color(0xFF8879F7),
+              ),
+            ),
+            TextSpan(
+              text: "shire",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Roboto",
+                color: Colors.white,
+              ),
+            ),
+            TextSpan(text: ".com"),
+          ]))
+    ],
+  );
 }
