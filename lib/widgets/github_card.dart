@@ -51,17 +51,20 @@ class GitHubCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    child: Text(
-                      this.title.length > 24
-                          ? this.title.substring(0, 24) + "..."
-                          : this.title,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
+                  Flexible(
+                    child: Container(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Text(
+                          this.title,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          overflow: TextOverflow.clip,
+                        ),
                       ),
-                      overflow: TextOverflow.fade,
                     ),
                   ),
                 ],
