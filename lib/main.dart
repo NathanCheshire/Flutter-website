@@ -36,15 +36,18 @@ class MyApp extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     createLogo(),
-                    GestureDetector(
-                      onTap: (() {
-                        _launchInBrowser(
-                            "http://www.github.com/NathanCheshire");
-                      }),
-                      child: SvgPicture.asset(
-                        "assets/GitHubheader.svg",
-                        width: 60,
-                        height: 60,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                      child: GestureDetector(
+                        onTap: (() {
+                          _launchInBrowser(
+                              "http://www.github.com/NathanCheshire");
+                        }),
+                        child: SvgPicture.asset(
+                          "assets/GitHubheader.svg",
+                          width: 60,
+                          height: 60,
+                        ),
                       ),
                     ),
                   ],
@@ -199,53 +202,56 @@ Widget createLogo() {
             ),
             borderRadius: BorderRadius.all(Radius.circular(14)),
           )),
-      RichText(
-          text: TextSpan(
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Roboto",
-                color: Colors.white,
+      Padding (
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: RichText(
+            text: TextSpan(
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Roboto",
+                  color: Colors.white,
+                ),
+                children: [
+              TextSpan(
+                text: "Nat",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Roboto",
+                  color: Color(0xFF8879F7),
+                ),
               ),
-              children: [
-            TextSpan(
-              text: "Nat",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Roboto",
-                color: Color(0xFF8879F7),
+              TextSpan(
+                text: "han",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Roboto",
+                  color: Colors.white,
+                ),
               ),
-            ),
-            TextSpan(
-              text: "han",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Roboto",
-                color: Colors.white,
+              TextSpan(
+                text: "Che",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Roboto",
+                  color: Color(0xFF8879F7),
+                ),
               ),
-            ),
-            TextSpan(
-              text: "Che",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Roboto",
-                color: Color(0xFF8879F7),
+              TextSpan(
+                text: "shire",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Roboto",
+                  color: Colors.white,
+                ),
               ),
-            ),
-            TextSpan(
-              text: "shire",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Roboto",
-                color: Colors.white,
-              ),
-            ),
-            TextSpan(text: ".com"),
-          ]))
+              TextSpan(text: ".com"),
+            ])),
+      )
     ],
   );
 }
