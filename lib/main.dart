@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_website/widgets/side_projects.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_website/widgets/bottom_widget.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: DefaultTabController(
-          length: 5,
+          length: 6,
           child: Scaffold(
             appBar: AppBar(
                 toolbarHeight: 120,
@@ -91,6 +92,19 @@ class MyApp extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
+                      "Side Projects",
+                      overflow: TextOverflow.fade,
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Roboto",
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Text(
                       "Resume",
                       overflow: TextOverflow.fade,
                       style: TextStyle(
@@ -119,6 +133,7 @@ class MyApp extends StatelessWidget {
               MyselfSection(tabContainerColor: tabContainerColor),
               GitHubSection(tabContainerColor: tabContainerColor),
               ExperienceSection(tabContainerColor: tabContainerColor),
+              SideProjectsSection(tabContainerColor: tabContainerColor),
               ResumeSection(tabContainerColor: tabContainerColor),
               ContactSection(tabContainerColor: tabContainerColor),
             ]),
