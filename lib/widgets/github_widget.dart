@@ -56,7 +56,8 @@ class GitHubSection extends StatelessWidget {
                             cards.add(new GitHubCard(
                                 title: snap.data[i].name,
                                 description: snap.data[i].description,
-                                language: "Language: " + snap.data[i].language));
+                                language: "Language: " + snap.data[i].language,
+                                link: snap.data[i].html_url));
                           }
                         }
                         return Wrap(

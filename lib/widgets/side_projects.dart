@@ -25,8 +25,8 @@ class SideProjectsSection extends StatelessWidget {
                       "Cyder is a multipurpose tool with it's own UI library written on top of Swing/AWT. No external UI libraries or tools for Java such as FXML were used for the creation of this project. I have been working on Cyder since 2017 (as long as I've known Java). The program itself contains over 35,000 lines of code and can accomplish a vast amount of tasks. See the screnshots below to see a few of my favorite things about Cyder. Also be sure to checkout the GitHub."),
               PaddedPNG(image: "assets/Console.png", width: 1081, height: 608),
               PaddedPNG(image: "assets/Weather.png", width: 480, height: 640),
-              SeparatingLine(description: "StudentScraper"),
-              SeparatingLine(description: "Punch"),
+              //SeparatingLine(description: "StudentScraper"),
+              //SeparatingLine(description: "Punch"),
             ],
           ),
         ));
