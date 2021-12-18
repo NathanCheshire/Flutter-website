@@ -57,9 +57,9 @@ class MyselfSection extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Text(
                       "Greetings and welcome to my personal webapp portfolio! " +
-                          "I attend Mississippi State University for software " +
-                          "engineering and mathematics. I enjoy body building and " +
-                          "fitness, programming, and hiking in my free time. I am very" +
+                          "I am a Mississippi State University graduate and hold a bachelors of science " +
+                          "in software engineering and a minor in mathematics. I enjoy body building/" +
+                          "fitness, programming, and listening to music. I am very" +
                           " proud of two awards in particular which I have achieved. " +
                           "Those awards are the highest rank a Boy Scout can earn," +
                           " that of Eagle Scout, and second degree Black Belt in Taekwondo." +
