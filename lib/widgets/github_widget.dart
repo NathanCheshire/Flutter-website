@@ -60,7 +60,7 @@ class GitHubSection extends StatelessWidget {
                                 description: snap.data[i].description,
                                 language: "Language: " + snap.data[i].language,
                                 link: snap.data[i].html_url,
-                                update: snap.data[i].updated_at));
+                                update: "Last updated: " + snap.data[i].updated_at.split("T")[0]));
                           }
                         }
                         return Wrap(
