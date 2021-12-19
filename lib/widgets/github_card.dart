@@ -7,12 +7,14 @@ class GitHubCard extends StatelessWidget {
   final String description;
   final String language;
   final String link;
+  final String update;
 
   const GitHubCard({
     required this.title,
     required this.description,
     required this.language,
     required this.link,
+    required this.update,
   });
 
   @override
@@ -25,8 +27,9 @@ class GitHubCard extends StatelessWidget {
       "Flutter-website",
       "Punch",
       "AVL-Loader",
-      "FacialRecognition",
-      "StraightShot"
+      "PacMan",
+      "StraightShot",
+      "StudentScraper"
     ];
 
     Future<void> _launchInBrowser(String url) async {
@@ -135,6 +138,24 @@ class GitHubCard extends StatelessWidget {
                 children: [
                   Text(
                     this.language,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    overflow: TextOverflow.fade,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    this.update,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,

@@ -52,12 +52,15 @@ class GitHubSection extends StatelessWidget {
                         for (var i = 0; i < snap.data.length; i++) {
                           if (snap.data[i].name != null &&
                               snap.data[i].description != null &&
-                              snap.data[i].language != null) {
+                              snap.data[i].language != null &&
+                              snap.data[i].html_url != null &&
+                              snap.data[i].updated_at != null) {
                             cards.add(new GitHubCard(
                                 title: snap.data[i].name,
                                 description: snap.data[i].description,
                                 language: "Language: " + snap.data[i].language,
-                                link: snap.data[i].html_url));
+                                link: snap.data[i].html_url,
+                                update: snap.data[i].updated_at));
                           }
                         }
                         return Wrap(
